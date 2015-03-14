@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{2E8121DB-E54F-461A-8330-6B1746E7A23C}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
+    <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>PatsViewer</RootNamespace>
     <AssemblyName>PatsViewer</AssemblyName>
@@ -13,6 +13,7 @@
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WarningLevel>4</WarningLevel>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -23,6 +24,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -32,8 +34,33 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.Practices.Prism.Composition">
+      <HintPath>..\..\Solution\packages\Prism.Composition.5.0.0\lib\NET45\Microsoft.Practices.Prism.Composition.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Prism.Interactivity">
+      <HintPath>..\..\Solution\packages\Prism.Interactivity.5.0.0\lib\NET45\Microsoft.Practices.Prism.Interactivity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Prism.Mvvm">
+      <HintPath>..\..\Solution\packages\Prism.Mvvm.1.0.0\lib\net45\Microsoft.Practices.Prism.Mvvm.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Prism.Mvvm.Desktop">
+      <HintPath>..\..\Solution\packages\Prism.Mvvm.1.0.0\lib\net45\Microsoft.Practices.Prism.Mvvm.Desktop.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Prism.PubSubEvents">
+      <HintPath>..\..\Solution\packages\Prism.PubSubEvents.1.0.0\lib\portable-sl4+wp7+windows8+net40\Microsoft.Practices.Prism.PubSubEvents.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Prism.SharedInterfaces">
+      <HintPath>..\..\Solution\packages\Prism.Mvvm.1.0.0\lib\net45\Microsoft.Practices.Prism.SharedInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation">
+      <HintPath>..\..\Solution\packages\CommonServiceLocator.1.2\lib\portable-windows8+net40+sl5+windowsphone8\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
@@ -84,6 +111,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

@@ -1,0 +1,4 @@
+G:\Dev\github\DevDumps.PATS\Pats\Solution\DevDumps.WPFSDK.Controls\bin\Debug\DevDumps.WPFSDK.Controls.dll
+G:\Dev\github\DevDumps.PATS\Pats\Solution\DevDumps.WPFSDK.Controls\bin\Debug\DevDumps.WPFSDK.Controls.pdb
+G:\Dev\github\DevDumps.PATS\Pats\Solution\DevDumps.WPFSDK.Controls\obj\Debug\DevDumps.WPFSDK.Controls.dll
+G:\Dev\github\DevDumps.PATS\Pats\Solution\DevDumps.WPFSDK.Controls\obj\Debug\DevDumps.WPFSDK.Controls.pdb
