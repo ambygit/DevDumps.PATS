@@ -1,0 +1,13 @@
+G:\Dev\github\DevDumps.PATS\build\PatsSolution\bin\Debug\PatsViewer.exe.config
+G:\Dev\github\DevDumps.PATS\build\PatsSolution\bin\Debug\PatsViewer.exe
+G:\Dev\github\DevDumps.PATS\build\PatsSolution\bin\Debug\PatsViewer.pdb
+G:\Dev\github\DevDumps.PATS\src\DevDumps.Pats.Apps.PatsViewer\obj\Debug\DevDumps.Pats.Apps.PatsViewer.csprojResolveAssemblyReference.cache
+G:\Dev\github\DevDumps.PATS\src\DevDumps.Pats.Apps.PatsViewer\obj\Debug\MainWindow.baml
+G:\Dev\github\DevDumps.PATS\src\DevDumps.Pats.Apps.PatsViewer\obj\Debug\MainWindow.g.cs
+G:\Dev\github\DevDumps.PATS\src\DevDumps.Pats.Apps.PatsViewer\obj\Debug\App.g.cs
+G:\Dev\github\DevDumps.PATS\src\DevDumps.Pats.Apps.PatsViewer\obj\Debug\PatsViewer_MarkupCompile.cache
+G:\Dev\github\DevDumps.PATS\src\DevDumps.Pats.Apps.PatsViewer\obj\Debug\PatsViewer.g.resources
+G:\Dev\github\DevDumps.PATS\src\DevDumps.Pats.Apps.PatsViewer\obj\Debug\PatsViewer.Properties.Resources.resources
+G:\Dev\github\DevDumps.PATS\src\DevDumps.Pats.Apps.PatsViewer\obj\Debug\DevDumps.Pats.Apps.PatsViewer.csproj.GenerateResource.Cache
+G:\Dev\github\DevDumps.PATS\src\DevDumps.Pats.Apps.PatsViewer\obj\Debug\PatsViewer.exe
+G:\Dev\github\DevDumps.PATS\src\DevDumps.Pats.Apps.PatsViewer\obj\Debug\PatsViewer.pdb

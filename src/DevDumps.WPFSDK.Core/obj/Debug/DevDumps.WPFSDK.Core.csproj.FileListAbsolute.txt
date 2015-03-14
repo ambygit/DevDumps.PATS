@@ -1,0 +1,6 @@
+G:\Dev\github\DevDumps.PATS\src\DevDumps.WPFSDK.Core\bin\Debug\DevDumps.WPFSDK.Core.dll
+G:\Dev\github\DevDumps.PATS\src\DevDumps.WPFSDK.Core\bin\Debug\DevDumps.WPFSDK.Core.pdb
+G:\Dev\github\DevDumps.PATS\build\PatsSolution\bin\Debug\DevDumps.WPFSDK.Core.dll
+G:\Dev\github\DevDumps.PATS\build\PatsSolution\bin\Debug\DevDumps.WPFSDK.Core.pdb
+G:\Dev\github\DevDumps.PATS\src\DevDumps.WPFSDK.Core\obj\Debug\DevDumps.WPFSDK.Core.dll
+G:\Dev\github\DevDumps.PATS\src\DevDumps.WPFSDK.Core\obj\Debug\DevDumps.WPFSDK.Core.pdb
