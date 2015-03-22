@@ -1,19 +1,43 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Threading;
 
 namespace DevDumps.WPFSDK.Base.Shell
 {
     public class AppBase : Application
     {
-        private BootstrapperBase _bootstrapperBase;
+        private readonly BootstrapperBase _bootstrapper;
 
-        public AppBase(BootstrapperBase bootstrapperBase)
+        public AppBase(BootstrapperBase bootstrapper)
         {
-            _bootstrapperBase = bootstrapperBase;
+            _bootstrapper = bootstrapper;
+        }
+
+        protected override void OnStartup(StartupEventArgs e)
+        {
+            base.OnStartup(e);
+
+
+            AppDomain.CurrentDomain.UnhandledException += CurrentDomainUnhandledException;
+            Current.Dispatcher.UnhandledException += Dispatcher_UnhandledException;
+            TaskScheduler.UnobservedTaskException += TaskSchedulerUnobservedTaskException;
+            Thread.CurrentThread.Name = "UIThread";
+
+            _bootstrapper.Run();
+        }
+
+        private void TaskSchedulerUnobservedTaskException(object sender, UnobservedTaskExceptionEventArgs e)
+        {
+        }
+
+        private void Dispatcher_UnhandledException(object sender, DispatcherUnhandledExceptionEventArgs e)
+        {
+        }
+
+        private void CurrentDomainUnhandledException(object sender, UnhandledExceptionEventArgs e)
+        {
         }
     }
 }

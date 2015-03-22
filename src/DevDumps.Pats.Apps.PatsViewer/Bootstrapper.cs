@@ -1,36 +1,53 @@
-﻿using DevDumps.WPFSDK.Base.Shell;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Windows;
+using System.Windows.Controls;
+using DevDumps.Pats.Apps.PatsViewer.ModulesConfig;
+using DevDumps.WPFSDK.Base.Shell;
+using DevDumps.WPFSDK.Common.RegionAdapters;
+using Microsoft.Practices.Prism.Modularity;
+using Microsoft.Practices.Prism.Regions;
 using Microsoft.Practices.Unity;
 
-namespace PatsViewer
+namespace DevDumps.Pats.Apps.PatsViewer
 {
     public class Bootstrapper : BootstrapperBase
     {
+        public new IUnityContainer Container { get; private set; }
 
         protected override IUnityContainer CreateContainer()
         {
             Container = base.CreateContainer();
 
+            Container.RegisterType<StackPanelRegionAdapter>();
+
             Container.RegisterType<Shell>();
-
-
 
             return Container;
         }
 
-        protected override Microsoft.Practices.Prism.Modularity.IModuleCatalog CreateModuleCatalog()
+        protected override IModuleCatalog CreateModuleCatalog()
         {
-            return base.CreateModuleCatalog();
+            return new ConfigurationModuleCatalog
+            {
+                Store = new ModuleConfigurationStore()
+            };
         }
 
-        protected override System.Windows.DependencyObject CreateShell()
+        protected override RegionAdapterMappings ConfigureRegionAdapterMappings()
         {
-            return Container.Resolve<Shell>();
+            var defaultMappings = base.ConfigureRegionAdapterMappings();
+            defaultMappings.RegisterMapping(typeof(StackPanel),Container.Resolve<StackPanelRegionAdapter>());
+
+            return defaultMappings;
         }
 
-        public IUnityContainer Container { get; private set; }
+        protected override DependencyObject CreateShell()
+        {
+            var shell =  Container.Resolve<Shell>();
+            Application.Current.MainWindow = shell;
+            Application.Current.ShutdownMode = ShutdownMode.OnMainWindowClose;
+            shell.Show();
+
+            return shell;
+        }
     }
 }

@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<modules>
+  <module assemblyFile="DevDumps.Pats.Apps.PatsViewer" 
+          moduleType="DevDumps.Pats.Apps.PatsViewer.MarketPrices.MarketPricesModule, DevDumps.Pats.Apps.PatsViewer" 
+          moduleName="ModuleE" startupLoaded="false" />
+  
+</modules>

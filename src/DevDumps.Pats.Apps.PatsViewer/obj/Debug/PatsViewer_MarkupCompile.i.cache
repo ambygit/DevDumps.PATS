@@ -5,16 +5,16 @@ exe
 C#
 .cs
 G:\Dev\github\DevDumps.PATS\src\DevDumps.Pats.Apps.PatsViewer\obj\Debug\
-PatsViewer
+DevDumps.Pats.Apps.PatsViewer
 none
 false
 DEBUG;TRACE
 G:\Dev\github\DevDumps.PATS\src\DevDumps.Pats.Apps.PatsViewer\App.xaml
-1-1509316546
+2-1913149523
 
-10-1238671370
-22406741029
-Shell.xaml;
+14147176496
+25-1977138930
+MarketPrices\MarketPricesView.xaml;Shell.xaml;
 
 False
 

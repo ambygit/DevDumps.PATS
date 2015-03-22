@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Express 2012 for Windows Desktop
+# Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevDumps.WPFSDK.Base", "..\..\src\DevDumps.WPFSDK.Base\DevDumps.WPFSDK.Base.csproj", "{046CDECD-3C64-4A46-B776-E0C7F8BBD0DF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevDumps.WPFSDK.Core", "..\..\src\DevDumps.WPFSDK.Core\DevDumps.WPFSDK.Core.csproj", "{4CCB375D-5564-4387-96E6-B59FE4B427D3}"
@@ -8,6 +8,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevDumps.WPFSDK.Controls", "..\..\src\DevDumps.WPFSDK.Controls\DevDumps.WPFSDK.Controls.csproj", "{FF7BB75C-9A51-4E37-933B-62C1B3F22BA8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevDumps.Pats.Apps.PatsViewer", "..\..\src\DevDumps.Pats.Apps.PatsViewer\DevDumps.Pats.Apps.PatsViewer.csproj", "{2E8121DB-E54F-461A-8330-6B1746E7A23C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevDumps.Pats.ViewModels", "..\..\src\DevDumps.Pats.ViewModels\DevDumps.Pats.ViewModels.csproj", "{5FC01802-EE48-40DA-93F8-AC05EC40AD56}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevDumps.WPFSDK.Common", "..\..\src\DevDumps.WPFSDK.Common\DevDumps.WPFSDK.Common.csproj", "{23ED4D6C-1ED3-454A-B712-603DB9632094}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,6 +35,14 @@ Global
 		{2E8121DB-E54F-461A-8330-6B1746E7A23C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2E8121DB-E54F-461A-8330-6B1746E7A23C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2E8121DB-E54F-461A-8330-6B1746E7A23C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5FC01802-EE48-40DA-93F8-AC05EC40AD56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FC01802-EE48-40DA-93F8-AC05EC40AD56}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FC01802-EE48-40DA-93F8-AC05EC40AD56}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FC01802-EE48-40DA-93F8-AC05EC40AD56}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23ED4D6C-1ED3-454A-B712-603DB9632094}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23ED4D6C-1ED3-454A-B712-603DB9632094}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23ED4D6C-1ED3-454A-B712-603DB9632094}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23ED4D6C-1ED3-454A-B712-603DB9632094}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

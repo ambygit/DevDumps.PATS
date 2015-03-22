@@ -1,8 +1,8 @@
-﻿<sdk:AppBase x:Class="PatsViewer.App"
+﻿<sdk:AppBase x:Class="DevDumps.Pats.Apps.PatsViewer.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:sdk="clr-namespace:DevDumps.WPFSDK.Base.Shell;assembly=DevDumps.WPFSDK.Base"
-             StartupUri="MainWindow.xaml">
+             >
     <sdk:AppBase.Resources>
 
     </sdk:AppBase.Resources>

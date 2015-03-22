@@ -7,8 +7,8 @@
     <ProjectGuid>{2E8121DB-E54F-461A-8330-6B1746E7A23C}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>PatsViewer</RootNamespace>
-    <AssemblyName>PatsViewer</AssemblyName>
+    <RootNamespace>DevDumps.Pats.Apps.PatsViewer</RootNamespace>
+    <AssemblyName>DevDumps.Pats.Apps.PatsViewer</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -70,6 +70,7 @@
       <HintPath>..\..\build\PatsSolution\packages\Unity.3.5.1404.0\lib\net45\Microsoft.Practices.Unity.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
@@ -93,6 +94,12 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Bootstrapper.cs" />
+    <Compile Include="MarketPrices\MarketPricesModule.cs" />
+    <Compile Include="MarketPrices\MarketPricesView.xaml.cs">
+      <DependentUpon>MarketPricesView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ModulesConfig\ModuleConfigurationStore.cs" />
+    <Compile Include="Regions\RegionName.cs" />
     <Compile Include="Shell.xaml.cs">
       <DependentUpon>Shell.xaml</DependentUpon>
     </Compile>
@@ -126,12 +133,24 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DevDumps.Pats.ViewModels\DevDumps.Pats.ViewModels.csproj">
+      <Project>{5fc01802-ee48-40da-93f8-ac05ec40ad56}</Project>
+      <Name>DevDumps.Pats.ViewModels</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DevDumps.WPFSDK.Base\DevDumps.WPFSDK.Base.csproj">
       <Project>{046cdecd-3c64-4a46-b776-e0c7f8bbd0df}</Project>
       <Name>DevDumps.WPFSDK.Base</Name>
     </ProjectReference>
+    <ProjectReference Include="..\DevDumps.WPFSDK.Common\DevDumps.WPFSDK.Common.csproj">
+      <Project>{23ed4d6c-1ed3-454a-b712-603db9632094}</Project>
+      <Name>DevDumps.WPFSDK.Common</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Page Include="MarketPrices\MarketPricesView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Shell.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -139,6 +158,11 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="modules.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

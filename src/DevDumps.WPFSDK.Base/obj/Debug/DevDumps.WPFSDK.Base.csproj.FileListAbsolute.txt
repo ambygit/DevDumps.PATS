@@ -1,5 +1,5 @@
 G:\Dev\github\DevDumps.PATS\build\PatsSolution\bin\Debug\DevDumps.WPFSDK.Base.dll
 G:\Dev\github\DevDumps.PATS\build\PatsSolution\bin\Debug\DevDumps.WPFSDK.Base.pdb
+G:\Dev\github\DevDumps.PATS\src\DevDumps.WPFSDK.Base\obj\Debug\DevDumps.WPFSDK.Base.csprojResolveAssemblyReference.cache
 G:\Dev\github\DevDumps.PATS\src\DevDumps.WPFSDK.Base\obj\Debug\DevDumps.WPFSDK.Base.dll
 G:\Dev\github\DevDumps.PATS\src\DevDumps.WPFSDK.Base\obj\Debug\DevDumps.WPFSDK.Base.pdb
-G:\Dev\github\DevDumps.PATS\src\DevDumps.WPFSDK.Base\obj\Debug\DevDumps.WPFSDK.Base.csprojResolveAssemblyReference.cache
