@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DevDumps.WPFSDK.Base.Shell;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
@@ -11,7 +12,8 @@ namespace PatsViewer
     /// <summary>
     /// Interaction logic for App.xaml
     /// </summary>
-    public partial class App : Application
+    public partial class App : AppBase
     {
+        public App() : base(new Bootstrapper()) { }
     }
 }
