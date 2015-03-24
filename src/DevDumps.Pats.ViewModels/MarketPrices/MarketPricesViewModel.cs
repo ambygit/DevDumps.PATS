@@ -1,14 +1,42 @@
-﻿using Microsoft.Practices.Prism.PubSubEvents;
+﻿using DevDumps.Pats.Gateway.Clients.Market;
+using Microsoft.Practices.Prism.Mvvm;
+using Microsoft.Practices.Prism.PubSubEvents;
+using Microsoft.Practices.Prism.ViewModel;
 
 namespace DevDumps.Pats.ViewModels.MarketPrices
 {
-    public class MarketPricesViewModel
+    public class MarketPricesViewModel : NotificationObject
     {
-        public MarketPricesViewModel(IEventAggregator eventAggregator)
+        private readonly IPricingServiceClient _pricingServiceClient;
+        private string _price;
+
+        public MarketPricesViewModel(IEventAggregator eventAggregator, IPricingServiceClient pricingServiceClient)
         {
-            Price = (1.23).ToString();
+            _pricingServiceClient = pricingServiceClient;
+            _pricingServiceClient.PriceUpdate += HandlePricingServiceClientPriceUpdate;
+            Subscribe("EURJPY");
         }
 
-        public string Price { get; set; }
+        void HandlePricingServiceClientPriceUpdate(object sender, BrokerPriceEventArgs eventArgs)
+        {
+            Price = eventArgs.BrokerPrice.BidPrice.ToString();           
+        }
+
+        public void Subscribe(string currencyPair)
+        {
+            //TODO: get this from UI subscribtion
+            _pricingServiceClient.Subscribe(currencyPair);
+
+        }
+
+        public string Price
+        {
+            get { return _price; }
+            set
+            {
+                _price = value;
+                RaisePropertyChanged(()=>Price);
+            }
+        }
     }
 }

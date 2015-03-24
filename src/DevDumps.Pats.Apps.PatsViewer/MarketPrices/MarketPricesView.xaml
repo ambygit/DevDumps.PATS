@@ -9,6 +9,9 @@
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
     <Grid>
+        <StackPanel Orientation="Horizontal">
+        <Label Content="EURJPY"></Label>
         <TextBox Text="{Binding Path=Price}"></TextBox>
+        </StackPanel>
     </Grid>
 </UserControl>

@@ -35,3 +35,5 @@ G:\Dev\github\DevDumps.PATS\src\DevDumps.Pats.ViewModels\bin\Debug\zh-Hant\Syste
 G:\Dev\github\DevDumps.PATS\src\DevDumps.Pats.ViewModels\obj\Debug\DevDumps.Pats.ViewModels.csprojResolveAssemblyReference.cache
 G:\Dev\github\DevDumps.PATS\src\DevDumps.Pats.ViewModels\obj\Debug\DevDumps.Pats.ViewModels.dll
 G:\Dev\github\DevDumps.PATS\src\DevDumps.Pats.ViewModels\obj\Debug\DevDumps.Pats.ViewModels.pdb
+G:\Dev\github\DevDumps.PATS\build\PatsSolution\bin\Debug\DevDumps.Pats.ViewModels.dll
+G:\Dev\github\DevDumps.PATS\build\PatsSolution\bin\Debug\DevDumps.Pats.ViewModels.pdb

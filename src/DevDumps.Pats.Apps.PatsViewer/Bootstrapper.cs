@@ -1,6 +1,7 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
 using DevDumps.Pats.Apps.PatsViewer.ModulesConfig;
+using DevDumps.Pats.Gateway.Clients.Market;
 using DevDumps.WPFSDK.Base.Shell;
 using DevDumps.WPFSDK.Common.RegionAdapters;
 using Microsoft.Practices.Prism.Modularity;
@@ -18,7 +19,7 @@ namespace DevDumps.Pats.Apps.PatsViewer
             Container = base.CreateContainer();
 
             Container.RegisterType<StackPanelRegionAdapter>();
-
+            Container.RegisterType<IPricingServiceClient, PricingServiceClient>();
             Container.RegisterType<Shell>();
 
             return Container;

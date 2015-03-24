@@ -122,6 +122,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="DevDumps.Pats.Apps.PatsViewer.AppSettings.config" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -133,6 +134,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DevDumps.Pats.Gateway.Clients\DevDumps.Pats.Gateway.Clients.csproj">
+      <Project>{320d32d9-fba7-4618-af99-8ee4859bc2b6}</Project>
+      <Name>DevDumps.Pats.Gateway.Clients</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DevDumps.Pats.ViewModels\DevDumps.Pats.ViewModels.csproj">
       <Project>{5fc01802-ee48-40da-93f8-ac05ec40ad56}</Project>
       <Name>DevDumps.Pats.ViewModels</Name>
@@ -160,9 +165,9 @@
     <Folder Include="Resources\" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="modules.xml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
+    <Content Include="modules.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

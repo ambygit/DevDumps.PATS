@@ -1,3 +1,4 @@
+G:\Dev\github\DevDumps.PATS\build\PatsSolution\bin\Debug\modules.xml
 G:\Dev\github\DevDumps.PATS\build\PatsSolution\bin\Debug\DevDumps.Pats.Apps.PatsViewer.exe.config
 G:\Dev\github\DevDumps.PATS\build\PatsSolution\bin\Debug\DevDumps.Pats.Apps.PatsViewer.exe
 G:\Dev\github\DevDumps.PATS\build\PatsSolution\bin\Debug\DevDumps.Pats.Apps.PatsViewer.pdb
@@ -6,6 +7,7 @@ G:\Dev\github\DevDumps.PATS\src\DevDumps.Pats.Apps.PatsViewer\obj\Debug\MarketPr
 G:\Dev\github\DevDumps.PATS\src\DevDumps.Pats.Apps.PatsViewer\obj\Debug\MarketPrices\MarketPricesView.g.cs
 G:\Dev\github\DevDumps.PATS\src\DevDumps.Pats.Apps.PatsViewer\obj\Debug\Shell.g.cs
 G:\Dev\github\DevDumps.PATS\src\DevDumps.Pats.Apps.PatsViewer\obj\Debug\App.g.cs
+G:\Dev\github\DevDumps.PATS\src\DevDumps.Pats.Apps.PatsViewer\obj\Debug\DevDumps.Pats.Apps.PatsViewer_Content.g.cs
 G:\Dev\github\DevDumps.PATS\src\DevDumps.Pats.Apps.PatsViewer\obj\Debug\DevDumps.Pats.Apps.PatsViewer_MarkupCompile.cache
 G:\Dev\github\DevDumps.PATS\src\DevDumps.Pats.Apps.PatsViewer\obj\Debug\DevDumps.Pats.Apps.PatsViewer_MarkupCompile.lref
 G:\Dev\github\DevDumps.PATS\src\DevDumps.Pats.Apps.PatsViewer\obj\Debug\Shell.baml

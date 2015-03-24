@@ -16,7 +16,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
+    <OutputPath>..\..\build\PatsSolution\bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -77,6 +77,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DevDumps.Pats.Gateway.Clients\DevDumps.Pats.Gateway.Clients.csproj">
+      <Project>{320d32d9-fba7-4618-af99-8ee4859bc2b6}</Project>
+      <Name>DevDumps.Pats.Gateway.Clients</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DevDumps.Pats.Model\DevDumps.Pats.Model.csproj">
+      <Project>{995ed7b4-7869-4a2f-8a4e-6e6e80e2cfc8}</Project>
+      <Name>DevDumps.Pats.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

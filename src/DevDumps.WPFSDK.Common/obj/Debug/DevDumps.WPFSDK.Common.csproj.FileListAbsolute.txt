@@ -37,3 +37,5 @@ G:\Dev\github\DevDumps.PATS\src\DevDumps.WPFSDK.Common\bin\Debug\zh-Hant\System.
 G:\Dev\github\DevDumps.PATS\src\DevDumps.WPFSDK.Common\obj\Debug\DevDumps.WPFSDK.Common.csprojResolveAssemblyReference.cache
 G:\Dev\github\DevDumps.PATS\src\DevDumps.WPFSDK.Common\obj\Debug\DevDumps.WPFSDK.Common.dll
 G:\Dev\github\DevDumps.PATS\src\DevDumps.WPFSDK.Common\obj\Debug\DevDumps.WPFSDK.Common.pdb
+G:\Dev\github\DevDumps.PATS\build\PatsSolution\bin\Debug\DevDumps.WPFSDK.Common.dll
+G:\Dev\github\DevDumps.PATS\build\PatsSolution\bin\Debug\DevDumps.WPFSDK.Common.pdb

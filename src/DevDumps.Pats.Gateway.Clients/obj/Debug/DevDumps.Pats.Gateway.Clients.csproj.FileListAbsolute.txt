@@ -1,0 +1,9 @@
+G:\Dev\github\DevDumps.PATS\src\DevDumps.Pats.Gateway.Clients\bin\Debug\DevDumps.Pats.Gateway.Clients.dll
+G:\Dev\github\DevDumps.PATS\src\DevDumps.Pats.Gateway.Clients\bin\Debug\DevDumps.Pats.Gateway.Clients.pdb
+G:\Dev\github\DevDumps.PATS\src\DevDumps.Pats.Gateway.Clients\bin\Debug\DevDumps.Pats.Model.dll
+G:\Dev\github\DevDumps.PATS\src\DevDumps.Pats.Gateway.Clients\bin\Debug\DevDumps.Pats.Model.pdb
+G:\Dev\github\DevDumps.PATS\src\DevDumps.Pats.Gateway.Clients\obj\Debug\DevDumps.Pats.Gateway.Clients.csprojResolveAssemblyReference.cache
+G:\Dev\github\DevDumps.PATS\src\DevDumps.Pats.Gateway.Clients\obj\Debug\DevDumps.Pats.Gateway.Clients.dll
+G:\Dev\github\DevDumps.PATS\src\DevDumps.Pats.Gateway.Clients\obj\Debug\DevDumps.Pats.Gateway.Clients.pdb
+G:\Dev\github\DevDumps.PATS\build\PatsSolution\bin\Debug\DevDumps.Pats.Gateway.Clients.dll
+G:\Dev\github\DevDumps.PATS\build\PatsSolution\bin\Debug\DevDumps.Pats.Gateway.Clients.pdb
