@@ -150,6 +150,10 @@
       <Project>{23ed4d6c-1ed3-454a-b712-603db9632094}</Project>
       <Name>DevDumps.WPFSDK.Common</Name>
     </ProjectReference>
+    <ProjectReference Include="..\DevDumps.WPFSDK.Styles\DevDumps.WPFSDK.Styles.csproj">
+      <Project>{b4a748da-bed7-4fba-a728-8cb50442316e}</Project>
+      <Name>DevDumps.WPFSDK.Styles</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Page Include="MarketPrices\MarketPricesView.xaml">
@@ -157,6 +161,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Shell.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

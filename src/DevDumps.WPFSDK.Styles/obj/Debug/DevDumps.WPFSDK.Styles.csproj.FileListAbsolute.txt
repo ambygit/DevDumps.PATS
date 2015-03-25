@@ -1,0 +1,10 @@
+G:\Dev\github\DevDumps.PATS\src\DevDumps.WPFSDK.Styles\obj\Debug\DevDumps.WPFSDK.Styles.csprojResolveAssemblyReference.cache
+G:\Dev\github\DevDumps.PATS\build\PatsSolution\bin\Debug\DevDumps.WPFSDK.Styles.dll
+G:\Dev\github\DevDumps.PATS\build\PatsSolution\bin\Debug\DevDumps.WPFSDK.Styles.pdb
+G:\Dev\github\DevDumps.PATS\src\DevDumps.WPFSDK.Styles\obj\Debug\Controls\Window.baml
+G:\Dev\github\DevDumps.PATS\src\DevDumps.WPFSDK.Styles\obj\Debug\Controls\AllControls.baml
+G:\Dev\github\DevDumps.PATS\src\DevDumps.WPFSDK.Styles\obj\Debug\SDKResources.baml
+G:\Dev\github\DevDumps.PATS\src\DevDumps.WPFSDK.Styles\obj\Debug\DevDumps.WPFSDK.Styles_MarkupCompile.cache
+G:\Dev\github\DevDumps.PATS\src\DevDumps.WPFSDK.Styles\obj\Debug\DevDumps.WPFSDK.Styles.g.resources
+G:\Dev\github\DevDumps.PATS\src\DevDumps.WPFSDK.Styles\obj\Debug\DevDumps.WPFSDK.Styles.dll
+G:\Dev\github\DevDumps.PATS\src\DevDumps.WPFSDK.Styles\obj\Debug\DevDumps.WPFSDK.Styles.pdb

@@ -4,3 +4,6 @@ G:\Dev\github\DevDumps.PATS\src\DevDumps.Pats.Apps.ServiceLaunch\bin\Debug\DevDu
 G:\Dev\github\DevDumps.PATS\src\DevDumps.Pats.Apps.ServiceLaunch\obj\Debug\DevDumps.Pats.Apps.ServiceLaunch.csprojResolveAssemblyReference.cache
 G:\Dev\github\DevDumps.PATS\src\DevDumps.Pats.Apps.ServiceLaunch\obj\Debug\DevDumps.Pats.Apps.ServiceLaunch.exe
 G:\Dev\github\DevDumps.PATS\src\DevDumps.Pats.Apps.ServiceLaunch\obj\Debug\DevDumps.Pats.Apps.ServiceLaunch.pdb
+G:\Dev\github\DevDumps.PATS\build\PatsSolution\bin\Debug\DevDumps.Pats.Apps.ServiceLaunch.exe.config
+G:\Dev\github\DevDumps.PATS\build\PatsSolution\bin\Debug\DevDumps.Pats.Apps.ServiceLaunch.exe
+G:\Dev\github\DevDumps.PATS\build\PatsSolution\bin\Debug\DevDumps.Pats.Apps.ServiceLaunch.pdb

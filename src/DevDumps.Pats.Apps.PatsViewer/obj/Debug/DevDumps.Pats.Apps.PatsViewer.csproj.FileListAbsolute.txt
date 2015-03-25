@@ -16,3 +16,5 @@ G:\Dev\github\DevDumps.PATS\src\DevDumps.Pats.Apps.PatsViewer\obj\Debug\DevDumps
 G:\Dev\github\DevDumps.PATS\src\DevDumps.Pats.Apps.PatsViewer\obj\Debug\DevDumps.Pats.Apps.PatsViewer.csproj.GenerateResource.Cache
 G:\Dev\github\DevDumps.PATS\src\DevDumps.Pats.Apps.PatsViewer\obj\Debug\DevDumps.Pats.Apps.PatsViewer.exe
 G:\Dev\github\DevDumps.PATS\src\DevDumps.Pats.Apps.PatsViewer\obj\Debug\DevDumps.Pats.Apps.PatsViewer.pdb
+G:\Dev\github\DevDumps.PATS\src\DevDumps.Pats.Apps.PatsViewer\obj\Debug\Styles.baml
+G:\Dev\github\DevDumps.PATS\src\DevDumps.Pats.Apps.PatsViewer\obj\Debug\App.baml

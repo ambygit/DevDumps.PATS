@@ -4,6 +4,10 @@
              xmlns:sdk="clr-namespace:DevDumps.WPFSDK.Base.Shell;assembly=DevDumps.WPFSDK.Base"
              >
     <sdk:AppBase.Resources>
-
+        <ResourceDictionary>
+        <ResourceDictionary.MergedDictionaries>
+            <ResourceDictionary Source="Styles.xaml"/>
+        </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </sdk:AppBase.Resources>
 </sdk:AppBase>

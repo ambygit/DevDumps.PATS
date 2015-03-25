@@ -1,0 +1,25 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="pack://application:,,,/DevDumps.WPFSDK.Styles;component/Controls/Window.xaml" />
+        <!--<ResourceDictionary Source="pack://application:,,,/DevDumps.WPFSDK.Styles;component/Controls/Button.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/DevDumps.WPFSDK.Styles;component/Controls/Border.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/DevDumps.WPFSDK.Styles;component/Controls/ComboBox.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/DevDumps.WPFSDK.Styles;component/Controls/CustomControls.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/DevDumps.WPFSDK.Styles;component/Controls/DataGrid.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/DevDumps.WPFSDK.Styles;component/Controls/Expander.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/DevDumps.WPFSDK.Styles;component/Controls/ListBox.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/DevDumps.WPFSDK.Styles;component/Controls/TabControl.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/DevDumps.WPFSDK.Styles;component/Controls/TabControlWithOverflow.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/DevDumps.WPFSDK.Styles;component/Controls/TextBox.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/DevDumps.WPFSDK.Styles;component/Controls/Thumb.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/DevDumps.WPFSDK.Styles;component/Controls/ToggleButton.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/DevDumps.WPFSDK.Styles;component/Controls/ToolTip.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/DevDumps.WPFSDK.Styles;component/Controls/ScrollBar.xaml" />
+        
+        <ResourceDictionary Source="pack://application:,,,/DevDumps.WPFSDK.Styles;component/Controls/Menu.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/DevDumps.WPFSDK.Styles;component/Controls/MenuButton.xaml" />-->
+    </ResourceDictionary.MergedDictionaries>
+
+</ResourceDictionary>
