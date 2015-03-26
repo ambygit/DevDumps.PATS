@@ -1,0 +1,5 @@
+G:\Dev\github\DevDumps.PATS\src\DevDumps.WPFSDK.UI\bin\Debug\DevDumps.WPFSDK.UI.dll
+G:\Dev\github\DevDumps.PATS\src\DevDumps.WPFSDK.UI\bin\Debug\DevDumps.WPFSDK.UI.pdb
+G:\Dev\github\DevDumps.PATS\src\DevDumps.WPFSDK.UI\obj\Debug\DevDumps.WPFSDK.UI.csprojResolveAssemblyReference.cache
+G:\Dev\github\DevDumps.PATS\src\DevDumps.WPFSDK.UI\obj\Debug\DevDumps.WPFSDK.UI.dll
+G:\Dev\github\DevDumps.PATS\src\DevDumps.WPFSDK.UI\obj\Debug\DevDumps.WPFSDK.UI.pdb

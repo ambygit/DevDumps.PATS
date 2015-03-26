@@ -5,10 +5,9 @@
     <ResourceDictionary.MergedDictionaries>
 
         <!--<ResourceDictionary Source="pack://application:,,,/DevDumps.WPFSDK.Styles;component/SimpleStyles.xaml"/>
-        <ResourceDictionary Source="pack://application:,,,/DevDumps.WPFSDK.Styles;component/Colours.xaml" />
         <ResourceDictionary Source="pack://application:,,,/DevDumps.WPFSDK.Styles;component/Images/Icons.xaml" />-->
         <ResourceDictionary Source="pack://application:,,,/DevDumps.WPFSDK.Styles;component/Controls/AllControls.xaml" />
-        <!--<ResourceDictionary Source="pack://application:,,,/DevDumps.WPFSDK.Styles;component/Images/Images.xaml" />-->
+        <ResourceDictionary Source="pack://application:,,,/DevDumps.WPFSDK.Styles;component/Themes/ThemeStyles.xaml" />
 
     </ResourceDictionary.MergedDictionaries>
 

@@ -2,17 +2,15 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:system="clr-namespace:System;assembly=mscorlib">
 
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="pack://application:,,,/DevDumps.WPFSDK.Styles;component/Themes/ThemeStyles.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+    
   <!-- Window style-->
-  <Style TargetType="{x:Type Window}">
-    <Setter Property="Background">
-      <Setter.Value>
-        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-          <GradientStop Color="#FF1AADE0" Offset="0"/>
-          <GradientStop Color="#FF15161A" Offset="0.767"/>
-        </LinearGradientBrush>
-      </Setter.Value>
-    </Setter>
-    <Setter Property="Icon" Value="..\Images\Logo.ico"/>
+    <Style x:Key="WindowSkinStyle" TargetType="{x:Type Window}">
+        <Setter Property="Background" Value="{StaticResource ResourceKey=WindowBackground}"></Setter>
+         <Setter Property="Width" Value="600"></Setter>
+        <Setter Property="Height" Value="400"></Setter>
   </Style>
 
 </ResourceDictionary>

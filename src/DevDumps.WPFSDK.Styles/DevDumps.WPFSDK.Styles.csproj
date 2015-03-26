@@ -54,10 +54,26 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Themes\Brushes.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Colours.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\ThemeStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <Content Include="Images\Logo.ico" />
+    <ProjectReference Include="..\DevDumps.WPFSDK.UI\DevDumps.WPFSDK.UI.csproj">
+      <Project>{c044d768-08cf-42cf-9009-c72c71d31401}</Project>
+      <Name>DevDumps.WPFSDK.UI</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
     <Page Include="SDKResources.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

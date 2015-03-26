@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevDumps.Pats.Apps.ServiceL
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevDumps.WPFSDK.Styles", "..\..\src\DevDumps.WPFSDK.Styles\DevDumps.WPFSDK.Styles.csproj", "{B4A748DA-BED7-4FBA-A728-8CB50442316E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevDumps.WPFSDK.UI", "..\..\src\DevDumps.WPFSDK.UI\DevDumps.WPFSDK.UI.csproj", "{C044D768-08CF-42CF-9009-C72C71D31401}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -67,6 +69,10 @@ Global
 		{B4A748DA-BED7-4FBA-A728-8CB50442316E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B4A748DA-BED7-4FBA-A728-8CB50442316E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B4A748DA-BED7-4FBA-A728-8CB50442316E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C044D768-08CF-42CF-9009-C72C71D31401}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C044D768-08CF-42CF-9009-C72C71D31401}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C044D768-08CF-42CF-9009-C72C71D31401}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C044D768-08CF-42CF-9009-C72C71D31401}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 
-3-830495152
-11825332402
+61518935377
+
 5-2129386006
-12-1401562060
-Controls\Window.xaml;Controls\AllControls.xaml;SDKResources.xaml;
+131145790148
+Controls\Window.xaml;Controls\AllControls.xaml;Themes\Brushes.xaml;Themes\Colours.xaml;Themes\ThemeStyles.xaml;SDKResources.xaml;
 
 False
 
