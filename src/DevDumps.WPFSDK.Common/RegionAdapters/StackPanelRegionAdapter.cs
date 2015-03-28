@@ -10,6 +10,7 @@ using Microsoft.Practices.Prism.Regions;
 
 namespace DevDumps.WPFSDK.Common.RegionAdapters
 {
+
     public class StackPanelRegionAdapter : RegionAdapterBase<StackPanel>
     {
         public StackPanelRegionAdapter(IRegionBehaviorFactory factory)

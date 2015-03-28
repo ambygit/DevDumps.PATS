@@ -118,8 +118,8 @@
 
     <!-- window background brush -->
     <LinearGradientBrush x:Key="WindowBackground" EndPoint="0.5,1" StartPoint="0.5,0">
-        <GradientStop Color="#FF8A7E5A" Offset="0"/>
-        <GradientStop Color="#FF2E2C27" Offset="0.767"/>
+        <GradientStop Color="{DynamicResource ThemeBackgroundColor}" Offset="0"/>
+        <GradientStop Color="{DynamicResource ThemeBackgroundContrastColor}" Offset="0.767"/>
     </LinearGradientBrush>
 
     <LinearGradientBrush x:Key="WindowBackground2" EndPoint="0.5,1" StartPoint="0.5,0">

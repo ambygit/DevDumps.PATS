@@ -69,6 +69,12 @@
     
     <!-- global highlight color -->
     <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}" Color="#7F1AADE0" />
+
+
+    <Color x:Key="ThemeBackgroundColor">#FF4793B5</Color>
+    <Color x:Key="ThemeBackgroundContrastColor">#FF285266</Color>
+    <Color x:Key="ThemeForegroundColor">#FFA8EEFA</Color>
+    
     
     <Color x:Key="HeaderTextColor">White</Color>
     <Color x:Key="LightBlueText">#FFA8EEFA</Color>

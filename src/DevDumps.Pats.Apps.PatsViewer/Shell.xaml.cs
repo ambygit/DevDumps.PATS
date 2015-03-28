@@ -1,4 +1,5 @@
 ﻿using System.Windows;
+using System.Windows.Input;
 using Microsoft.Practices.Prism.PubSubEvents;
 using Microsoft.Practices.Prism.Regions;
 
@@ -12,6 +13,16 @@ namespace DevDumps.Pats.Apps.PatsViewer
         public Shell(IEventAggregator eventAggregator, IRegionManager regionManager)
         {
             InitializeComponent();
+        }
+
+        private void HandleMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            DragMove();
+        }
+
+        private void HandleCloseClick(object sender, RoutedEventArgs e)
+        {
+            Close();
         }
     }
 }

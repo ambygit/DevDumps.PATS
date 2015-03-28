@@ -78,7 +78,7 @@
   <ItemGroup>
     <Compile Include="Behaviors\Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RegionAdapters\Class1.cs" />
+    <Compile Include="RegionAdapters\StackPanelRegionAdapter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

@@ -13,17 +13,40 @@
         
         <Grid.RowDefinitions>
             <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
             <RowDefinition Height="*"></RowDefinition>
         </Grid.RowDefinitions>
         
         <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="50"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="60"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            
+            <Border Grid.Column="0">
+                <Button Content="Logo"></Button>
+            </Border>
+
+            <Border Grid.Column="1">
+                <StackPanel HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  MouseLeftButtonDown="HandleMouseLeftButtonDown"></StackPanel>
+            </Border>
+
+            <Border Grid.Column="2">
+                    <Button Content="Close" Click="HandleCloseClick"></Button>
+            </Border>
+        </Grid>
+        
+        <Grid Grid.Row="1" Margin="0,2,0,2">
             <StackPanel regions:RegionManager.RegionName="{x:Static regions1:RegionName.MainMenuRegionName}"></StackPanel>    
         </Grid>
 
-        <Grid Grid.Row="1">
+        <Grid Grid.Row="2" Margin="0,2,0,2">
             <StackPanel regions:RegionManager.RegionName="{x:Static regions1:RegionName.ContentRegionName}"></StackPanel>
         </Grid>
 
 
     </Grid>
+
+
 </Window>
