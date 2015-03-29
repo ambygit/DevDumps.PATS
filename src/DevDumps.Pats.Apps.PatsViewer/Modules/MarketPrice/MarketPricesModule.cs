@@ -1,4 +1,5 @@
-﻿using DevDumps.Pats.Apps.PatsViewer.Regions;
+﻿using DevDumps.Pats.Apps.PatsViewer.Modules.MarketPrices;
+using DevDumps.Pats.Apps.PatsViewer.Regions;
 using Microsoft.Practices.Prism.Modularity;
 using Microsoft.Practices.Prism.Regions;
 

@@ -97,8 +97,11 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Bootstrapper.cs" />
-    <Compile Include="MarketPrices\MarketPricesModule.cs" />
-    <Compile Include="MarketPrices\MarketPricesView.xaml.cs">
+    <Compile Include="Modules\MarketPrice\MarketPriceView.xaml.cs">
+      <DependentUpon>MarketPriceView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\MarketPrice\MarketPricesModule.cs" />
+    <Compile Include="Modules\MarketPrice\MarketPricesView.xaml.cs">
       <DependentUpon>MarketPricesView.xaml</DependentUpon>
     </Compile>
     <Compile Include="ModulesConfig\ModuleConfigurationStore.cs" />
@@ -159,7 +162,11 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Page Include="MarketPrices\MarketPricesView.xaml">
+    <Page Include="Modules\MarketPrice\MarketPriceView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Modules\MarketPrice\MarketPricesView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

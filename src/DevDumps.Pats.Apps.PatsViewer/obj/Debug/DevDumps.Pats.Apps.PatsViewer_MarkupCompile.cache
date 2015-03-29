@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 G:\Dev\github\DevDumps.PATS\src\DevDumps.Pats.Apps.PatsViewer\App.xaml
-32024967552
+468179122
 1-1820191963
-101067712215
+11-1907066906
 77-305160452
-MarketPrices\MarketPricesView.xaml;Shell.xaml;Styles.xaml;
+Modules\MarketPrice\MarketPriceView.xaml;Modules\MarketPrice\MarketPricesView.xaml;Shell.xaml;Styles.xaml;
 
 False
 

@@ -3,8 +3,6 @@ G:\Dev\github\DevDumps.PATS\build\PatsSolution\bin\Debug\DevDumps.Pats.Apps.Pats
 G:\Dev\github\DevDumps.PATS\build\PatsSolution\bin\Debug\DevDumps.Pats.Apps.PatsViewer.exe
 G:\Dev\github\DevDumps.PATS\build\PatsSolution\bin\Debug\DevDumps.Pats.Apps.PatsViewer.pdb
 G:\Dev\github\DevDumps.PATS\src\DevDumps.Pats.Apps.PatsViewer\obj\Debug\DevDumps.Pats.Apps.PatsViewer.csprojResolveAssemblyReference.cache
-G:\Dev\github\DevDumps.PATS\src\DevDumps.Pats.Apps.PatsViewer\obj\Debug\MarketPrices\MarketPricesView.baml
-G:\Dev\github\DevDumps.PATS\src\DevDumps.Pats.Apps.PatsViewer\obj\Debug\MarketPrices\MarketPricesView.g.cs
 G:\Dev\github\DevDumps.PATS\src\DevDumps.Pats.Apps.PatsViewer\obj\Debug\Shell.g.cs
 G:\Dev\github\DevDumps.PATS\src\DevDumps.Pats.Apps.PatsViewer\obj\Debug\App.g.cs
 G:\Dev\github\DevDumps.PATS\src\DevDumps.Pats.Apps.PatsViewer\obj\Debug\DevDumps.Pats.Apps.PatsViewer_Content.g.cs
@@ -18,3 +16,8 @@ G:\Dev\github\DevDumps.PATS\src\DevDumps.Pats.Apps.PatsViewer\obj\Debug\DevDumps
 G:\Dev\github\DevDumps.PATS\src\DevDumps.Pats.Apps.PatsViewer\obj\Debug\DevDumps.Pats.Apps.PatsViewer.pdb
 G:\Dev\github\DevDumps.PATS\src\DevDumps.Pats.Apps.PatsViewer\obj\Debug\Styles.baml
 G:\Dev\github\DevDumps.PATS\src\DevDumps.Pats.Apps.PatsViewer\obj\Debug\App.baml
+G:\Dev\github\DevDumps.PATS\src\DevDumps.Pats.Apps.PatsViewer\obj\Debug\Modules\MarketPrice\MarketPriceView.baml
+G:\Dev\github\DevDumps.PATS\src\DevDumps.Pats.Apps.PatsViewer\obj\Debug\Modules\MarketPrice\MarketPriceView.g.cs
+G:\Dev\github\DevDumps.PATS\src\DevDumps.Pats.Apps.PatsViewer\obj\Debug\Modules\MarketPrice\MarketPricesView.g.cs
+G:\Dev\github\DevDumps.PATS\src\DevDumps.Pats.Apps.PatsViewer\obj\Debug\GeneratedInternalTypeHelper.g.cs
+G:\Dev\github\DevDumps.PATS\src\DevDumps.Pats.Apps.PatsViewer\obj\Debug\Modules\MarketPrice\MarketPricesView.baml

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
@@ -8,15 +9,15 @@ namespace DevDumps.Pats.Gateway.Clients.Market
 {
     public interface IPricingServiceClient
     {
-        event BrokerPriceUpdateHandler PriceUpdate;
+        event MarketPriceUpdateHandler PriceUpdate;
         void Subscribe(string currencyPair);
     }
 
     public class PricingServiceClient : IPricingServiceClient
     {
-        public event BrokerPriceUpdateHandler PriceUpdate;
+        public event MarketPriceUpdateHandler PriceUpdate;
         private readonly Random _random = new Random();
-        private readonly Dictionary<string, BrokerPrice> _subscriptions = new Dictionary<string, BrokerPrice>();
+        private readonly ConcurrentDictionary<string, MarketPrice> _subscriptions = new ConcurrentDictionary<string, MarketPrice>();
         private readonly Timer _timer;
 
         public PricingServiceClient()
@@ -33,7 +34,7 @@ namespace DevDumps.Pats.Gateway.Clients.Market
         {
             if (currencyPair == null) throw new ArgumentNullException("currencyPair");
             //ToDo: retain callback handler
-            _subscriptions.Add(currencyPair,BrokerPrice.GetSamplePrice(currencyPair));
+            _subscriptions.GetOrAdd(currencyPair, MarketPrice.GetSamplePrice);
         }
 
         private void SendPriceUpdate()
@@ -44,12 +45,14 @@ namespace DevDumps.Pats.Gateway.Clients.Market
                 double initialBid = Math.Max(0.1, brokerPrice.BidPrice + ((_random.NextDouble() * 2.0) - 1));
                 double initialAsk = initialBid + (_random.NextDouble() + 0.5);
                 brokerPrice.Update(initialBid, initialAsk);
+
+                KeyValuePair<string, MarketPrice> subscription1 = subscription;
                 Task.Factory.StartNew(() =>
                 {
                     var updateHandler = PriceUpdate;
                     if (updateHandler != null)
                     {
-                        updateHandler(this, new BrokerPriceEventArgs() {BrokerPrice = brokerPrice});
+                        updateHandler(this, new MarketPriceEventArgs() {MarketPrice = brokerPrice, CurrencyPair = subscription1.Key});
                     }
                 }
                     );

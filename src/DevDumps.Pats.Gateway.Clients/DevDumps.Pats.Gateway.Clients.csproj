@@ -39,7 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Market\BrokerPriceEventArgs.cs" />
+    <Compile Include="Market\MarketPriceEventArgs.cs" />
     <Compile Include="Market\PricingServiceClient.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

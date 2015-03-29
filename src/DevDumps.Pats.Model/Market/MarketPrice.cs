@@ -2,7 +2,7 @@
 
 namespace DevDumps.Pats.Model.Market
 {
-    public class BrokerPrice
+    public class MarketPrice
     {
         public string CurrencyPair { get; set; }
         public string BrokerName { get; set; }
@@ -11,9 +11,9 @@ namespace DevDumps.Pats.Model.Market
         public double AskPrice { get; set; }
         public DateTime Timestamp { get; set; }
 
-        public static BrokerPrice GetSamplePrice(string currencyPair)
+        public static MarketPrice GetSamplePrice(string currencyPair)
         {
-            return new BrokerPrice()
+            return new MarketPrice()
             {
                 CurrencyPair = currencyPair,
                 BrokerName = "GFI",

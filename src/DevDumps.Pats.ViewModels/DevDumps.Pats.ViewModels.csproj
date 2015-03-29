@@ -73,7 +73,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
-    <Compile Include="MarketPrices\MarketPricesViewModel.cs" />
+    <Compile Include="MarketPrice\MarketPricesViewModel.cs" />
+    <Compile Include="MarketPrice\MarketPriceViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -87,6 +88,10 @@
     <ProjectReference Include="..\DevDumps.Pats.Model\DevDumps.Pats.Model.csproj">
       <Project>{995ed7b4-7869-4a2f-8a4e-6e6e80e2cfc8}</Project>
       <Name>DevDumps.Pats.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DevDumps.WPFSDK.Core\DevDumps.WPFSDK.Core.csproj">
+      <Project>{4ccb375d-5564-4387-96e6-b59fe4b427d3}</Project>
+      <Name>DevDumps.WPFSDK.Core</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
