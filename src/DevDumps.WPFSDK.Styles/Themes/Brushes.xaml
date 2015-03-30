@@ -116,6 +116,12 @@
         </DrawingBrush.Drawing>
     </DrawingBrush>
 
+
+    <SolidColorBrush x:Key="ThemeBackgroundBrush" Color="{DynamicResource ThemeBackgroundColor}" ></SolidColorBrush>
+    <SolidColorBrush x:Key="ThemeBackgroundContrastBrush" Color="{DynamicResource ThemeBackgroundContrastColor}"></SolidColorBrush>
+    <SolidColorBrush x:Key="ThemeForegroundBrush" Color="{DynamicResource ThemeForegroundColor}"></SolidColorBrush>
+    <SolidColorBrush x:Key="ThemeBorderBrush" Color="{DynamicResource ThemeBorderColor}"></SolidColorBrush>
+    
     <!-- window background brush -->
     <LinearGradientBrush x:Key="WindowBackground" EndPoint="0.5,1" StartPoint="0.5,0">
         <GradientStop Color="{DynamicResource ThemeBackgroundColor}" Offset="0"/>

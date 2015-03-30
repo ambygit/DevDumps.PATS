@@ -20,8 +20,8 @@
         </Grid.RowDefinitions>
         
         <StackPanel Orientation="Horizontal" Grid.Row="0">
-            <TextBox x:Name="currencyPair" Width="100"></TextBox> 
-            <Button Content="Add" Command="{Binding Path=SubscribeCommand}" CommandParameter="{Binding Path=Text,ElementName=currencyPair}"></Button>
+            <TextBox x:Name="CurrencyPair" Width="100"></TextBox> 
+            <Button Content="Add" Command="{Binding Path=SubscribeCommand}" CommandParameter="{Binding Path=Text,ElementName=CurrencyPair}"></Button>
         </StackPanel>
         
         <Border Grid.Row="1">

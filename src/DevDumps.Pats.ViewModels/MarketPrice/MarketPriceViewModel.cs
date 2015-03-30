@@ -8,7 +8,8 @@ namespace DevDumps.Pats.ViewModels.MarketPrice
     {
         private readonly string _currencyPair;
         private readonly IEventAggregator _eventAggregator;
-        private string _price;
+        private double _bid;
+        private double _ask;
 
         public MarketPriceViewModel(string currencyPair, IEventAggregator eventAggregator)
         {
@@ -18,7 +19,8 @@ namespace DevDumps.Pats.ViewModels.MarketPrice
 
         public void Update(MarketPriceEventArgs eventArgs)
         {
-            Price = eventArgs.MarketPrice.BidPrice.ToString();
+            Bid = eventArgs.MarketPrice.BidPrice;
+            Ask = eventArgs.MarketPrice.AskPrice;
         }
 
         public string CurrencyPair
@@ -26,13 +28,23 @@ namespace DevDumps.Pats.ViewModels.MarketPrice
             get { return _currencyPair; }
         }
 
-        public string Price
+        public double Bid
         {
-            get { return _price; }
+            get { return _bid; }
             set
             {
-                _price = value;
-                RaisePropertyChanged(() => Price);
+                _bid = value;
+                RaisePropertyChanged(() => Bid);
+            }
+        }
+
+        public double Ask
+        {
+            get { return _ask; }
+            set
+            {
+                _ask = value;
+                RaisePropertyChanged(()=>Ask);
             }
         }
     }
