@@ -25,10 +25,12 @@
             </Grid.ColumnDefinitions>
             
             <Border Grid.Column="0">
-                <Button Content="Logo"></Button>
+                <Button >
+                    <Image Source="Resources\Logo.ico"></Image>
+                </Button>
             </Border>
 
-            <Border Grid.Column="1" MouseLeftButtonDown="HandleMouseLeftButtonDown"  Background="{StaticResource ThemeBackgroundBrush}">
+            <Border Grid.Column="1" MouseLeftButtonDown="HandleMouseLeftButtonDown"  Background="Transparent">
                 <StackPanel HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  ></StackPanel>
             </Border>
 
@@ -42,6 +44,7 @@
         </Grid>
 
         <Grid Grid.Row="2" Margin="0,2,0,2">
+            <Border Style="{StaticResource StandardPanelStyle}"></Border>
             <StackPanel regions:RegionManager.RegionName="{x:Static regions1:RegionName.ContentRegionName}"></StackPanel>
         </Grid>
 

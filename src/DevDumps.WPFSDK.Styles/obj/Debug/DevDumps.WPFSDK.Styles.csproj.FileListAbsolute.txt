@@ -11,3 +11,4 @@ G:\Dev\github\DevDumps.PATS\src\DevDumps.WPFSDK.Styles\obj\Debug\DevDumps.WPFSDK
 G:\Dev\github\DevDumps.PATS\src\DevDumps.WPFSDK.Styles\obj\Debug\Themes\ThemeStyles.baml
 G:\Dev\github\DevDumps.PATS\src\DevDumps.WPFSDK.Styles\obj\Debug\Themes\Colours.baml
 G:\Dev\github\DevDumps.PATS\src\DevDumps.WPFSDK.Styles\obj\Debug\Themes\Brushes.baml
+G:\Dev\github\DevDumps.PATS\src\DevDumps.WPFSDK.Styles\obj\Debug\Controls\Border.baml

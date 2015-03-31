@@ -5,6 +5,7 @@
     
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="pack://application:,,,/DevDumps.WPFSDK.Styles;component/Controls/Window.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/DevDumps.WPFSDK.Styles;component/Controls/Border.xaml" />
         <!--<ResourceDictionary Source="pack://application:,,,/DevDumps.WPFSDK.Styles;component/Controls/Button.xaml" />
         <ResourceDictionary Source="pack://application:,,,/DevDumps.WPFSDK.Styles;component/Controls/Border.xaml" />
         <ResourceDictionary Source="pack://application:,,,/DevDumps.WPFSDK.Styles;component/Controls/ComboBox.xaml" />

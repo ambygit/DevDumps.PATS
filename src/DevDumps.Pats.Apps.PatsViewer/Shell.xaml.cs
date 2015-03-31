@@ -24,5 +24,11 @@ namespace DevDumps.Pats.Apps.PatsViewer
         {
             Close();
         }
+
+        
+ 
     }
+
+
+
 }

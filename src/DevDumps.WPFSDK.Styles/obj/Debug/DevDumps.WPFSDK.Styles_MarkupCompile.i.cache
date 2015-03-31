@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 
-61518935377
+71005080414
 
 5-2129386006
 131145790148
-Controls\Window.xaml;Controls\AllControls.xaml;Themes\Brushes.xaml;Themes\Colours.xaml;Themes\ThemeStyles.xaml;SDKResources.xaml;
+Controls\Border.xaml;Controls\Window.xaml;Controls\AllControls.xaml;Themes\Brushes.xaml;Themes\Colours.xaml;Themes\ThemeStyles.xaml;SDKResources.xaml;
 
 False
 
