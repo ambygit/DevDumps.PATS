@@ -8,21 +8,32 @@
              d:DesignHeight="300" d:DesignWidth="300">
     <Grid>
         <Grid.Resources>
-            <Style x:Key="PriceStyle" TargetType="TextBlock">
-                <Setter Property="Width" Value="20"></Setter>
+            <Style x:Key="PriceStyle" TargetType="TextBlock">               
                 <Setter Property="VerticalAlignment" Value="Center"></Setter>
                 <Setter Property="FontSize" Value="20"></Setter>
-                <Setter Property="Padding" Value="4,2,4,2"></Setter>
+                <Setter Property="Padding" Value="4,0,4,0"></Setter>
+                <Setter Property="Margin" Value="2"></Setter>
+                <Setter Property="Width" Value="40"></Setter>
+                <Setter Property="Foreground" Value="{StaticResource ThemeForegroundBrush}"></Setter>
             </Style>
-            
-            <converters:DoubleToPrecisionConverter x:Key="DoblDoubleToPrecisionConverter" Precision="2"></converters:DoubleToPrecisionConverter>
+
+            <DataTemplate x:Key="CurrencyPairStyle">
+                <Label Content="{Binding Path=CurrencyPair}" 
+                       FontSize="20" Foreground="{StaticResource ThemeForegroundBrush}"
+                       VerticalAlignment="Center"></Label>
+            </DataTemplate>
+
+            <converters:DoubleToPrecisionConverter x:Key="DoubleToPrecisionConverter" Precision="2"></converters:DoubleToPrecisionConverter>
         </Grid.Resources>
         
-        <Border BorderThickness="2" BorderBrush="{StaticResource ResourceKey=ThemeBackgroundColor}">
-        <StackPanel Orientation="Horizontal">
-            <Label Content="{Binding Path=CurrencyPair}"></Label>
-            <TextBlock Text="{Binding Path=Bid, Converter={StaticResource ResourceKey=DoblDoubleToPrecisionConverter}}"></TextBlock>
-            <TextBlock Text="{Binding Path=Ask, Converter={StaticResource ResourceKey=DoblDoubleToPrecisionConverter}}"></TextBlock>
+        <Border BorderThickness="2" BorderBrush="{StaticResource ResourceKey=ThemeBackgroundBrush}" >
+        <StackPanel Orientation="Horizontal" Margin="2">
+            <ContentPresenter ContentTemplate="{StaticResource ResourceKey=CurrencyPairStyle}" Content="{Binding}">
+            </ContentPresenter>
+            <TextBlock Text="{Binding Path=Bid, Converter={StaticResource ResourceKey=DoubleToPrecisionConverter}}"
+                       Style="{StaticResource ResourceKey=PriceStyle}"></TextBlock>
+            <TextBlock Text="{Binding Path=Ask, Converter={StaticResource ResourceKey=DoubleToPrecisionConverter}}"
+                       Style="{StaticResource ResourceKey=PriceStyle}"></TextBlock>
         </StackPanel>
         </Border>
     </Grid>

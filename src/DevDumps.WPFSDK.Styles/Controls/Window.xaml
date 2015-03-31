@@ -13,6 +13,19 @@
         <Setter Property="Height" Value="400"></Setter>
         <Setter Property="WindowStyle" Value="None"></Setter>
         <Setter Property="ResizeMode" Value="CanResize"></Setter>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Window">
+                    <Grid>
+                        <Border Background="{TemplateBinding Background}"></Border>
+                        
+                        <AdornerDecorator>
+                            <ContentPresenter Content="{TemplateBinding Content}" Margin="{TemplateBinding Margin}"></ContentPresenter>
+                        </AdornerDecorator>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
        
         
   </Style>

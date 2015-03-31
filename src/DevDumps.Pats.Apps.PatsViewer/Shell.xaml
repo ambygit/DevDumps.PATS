@@ -3,10 +3,10 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:regions="http://www.codeplex.com/CompositeWPF"
         xmlns:regions1="clr-namespace:DevDumps.Pats.Apps.PatsViewer.Regions"
-        Title="PATS" Style="{StaticResource ResourceKey=WindowSkinStyle}"
+        Title="PATS" Style="{StaticResource ResourceKey=WindowSkinStyle}"        
         Icon="Resources\Logo.ico">  
     
-    <Grid>
+ <Grid>
  <Grid.Resources>
            
         </Grid.Resources>        
@@ -28,8 +28,8 @@
                 <Button Content="Logo"></Button>
             </Border>
 
-            <Border Grid.Column="1">
-                <StackPanel HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  MouseLeftButtonDown="HandleMouseLeftButtonDown"></StackPanel>
+            <Border Grid.Column="1" MouseLeftButtonDown="HandleMouseLeftButtonDown"  Background="{StaticResource ThemeBackgroundBrush}">
+                <StackPanel HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  ></StackPanel>
             </Border>
 
             <Border Grid.Column="2">

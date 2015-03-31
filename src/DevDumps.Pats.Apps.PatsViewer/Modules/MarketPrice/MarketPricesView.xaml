@@ -3,10 +3,11 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-             xmlns:behaviors="clr-namespace:DevDumps.WPFSDK.Common.Behaviors;assembly=DevDumps.WPFSDK.Common"
              xmlns:marketPrice="clr-namespace:DevDumps.Pats.ViewModels.MarketPrice;assembly=DevDumps.Pats.ViewModels"
              xmlns:marketPrices="clr-namespace:DevDumps.Pats.Apps.PatsViewer.Modules.MarketPrices"
-             behaviors:ViewModelLoader.ViewModelType="marketPrice:MarketPricesViewModel"
+             xmlns:viewBehavior="clr-namespace:DevDumps.WPFSDK.Common.ViewBehavior;assembly=DevDumps.WPFSDK.Common"
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+             viewBehavior:ViewModelLoader.ViewModelType="marketPrice:MarketPricesViewModel"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
     
@@ -20,15 +21,23 @@
         </Grid.RowDefinitions>
         
         <StackPanel Orientation="Horizontal" Grid.Row="0">
-            <TextBox x:Name="CurrencyPair" Width="100"></TextBox> 
+            <TextBox x:Name="CurrencyPair" Width="100">
+                <i:Interaction.Behaviors>
+                    <viewBehavior:SubmitOnEnterBehavior SubmitCommand="{Binding Path=SubscribeCommand}"></viewBehavior:SubmitOnEnterBehavior> 
+                </i:Interaction.Behaviors>
+            </TextBox> 
             <Button Content="Add" Command="{Binding Path=SubscribeCommand}" CommandParameter="{Binding Path=Text,ElementName=CurrencyPair}"></Button>
         </StackPanel>
-        
-        <Border Grid.Row="1">
-            <ListBox ItemsSource="{Binding Path=MarketPrices}">
+
+        <Border Grid.Row="1" Background="{StaticResource ResourceKey=StandardPanelBrush}">
+            <ListBox ItemsSource="{Binding Path=MarketPrices}" Background="Transparent">
                 <ListBox.ItemsPanel>
                     <ItemsPanelTemplate>
-                        <WrapPanel MaxWidth="500"></WrapPanel>
+                        <WrapPanel HorizontalAlignment="Left"
+                                   Width="{Binding Path=(FrameworkElement.ActualWidth), RelativeSource={RelativeSource AncestorType=ScrollContentPresenter}}"
+                                   ItemHeight="{Binding Path=(ListView.View).ItemHeight, RelativeSource={RelativeSource AncestorType=ListView}}"
+                                   ItemWidth="{Binding Path=(ListView.View).ItemWidth, RelativeSource={RelativeSource AncestorType=ListView}}"
+                                   ></WrapPanel>
                     </ItemsPanelTemplate>
                 </ListBox.ItemsPanel>        
                 <ListBox.ItemTemplate>

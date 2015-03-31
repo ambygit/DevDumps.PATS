@@ -3,7 +3,7 @@ using System.Windows;
 using DevDumps.WPFSDK.Core.Unity;
 using Microsoft.Practices.Unity;
 
-namespace DevDumps.WPFSDK.Common.Behaviors
+namespace DevDumps.WPFSDK.Common.ViewBehavior
 {
     public static class ViewModelLoader
     {
