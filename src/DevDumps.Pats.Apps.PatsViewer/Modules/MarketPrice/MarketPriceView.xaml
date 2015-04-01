@@ -26,7 +26,7 @@
             <converters:DoubleToPrecisionConverter x:Key="DoubleToPrecisionConverter" Precision="2"></converters:DoubleToPrecisionConverter>
         </Grid.Resources>
         
-        <Border BorderThickness="2" BorderBrush="{StaticResource ResourceKey=ThemeBackgroundBrush}" >
+        <Border BorderThickness="2" BorderBrush="{StaticResource ResourceKey=ThemeBackgroundBrush}" Background="{StaticResource DarkPanelBrush}" >
         <StackPanel Orientation="Horizontal" Margin="2">
             <ContentPresenter ContentTemplate="{StaticResource ResourceKey=CurrencyPairStyle}" Content="{Binding}">
             </ContentPresenter>

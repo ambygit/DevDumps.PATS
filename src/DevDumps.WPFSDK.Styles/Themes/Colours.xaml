@@ -75,7 +75,8 @@
     <Color x:Key="ThemeBackgroundContrastColor">#FF285266</Color>
     <Color x:Key="ThemeForegroundColor">#FFA8EEFA</Color>
     <Color x:Key="ThemeBorderColor">#FFA8EEFA</Color>
-    <Color x:Key="StandardPanelColor">#FF888888</Color>
+    <Color x:Key="StandardPanelColor">#FF999999</Color>
+    <Color x:Key="DarkPanelColor">#FF777777</Color>
     
     
     <Color x:Key="HeaderTextColor">White</Color>

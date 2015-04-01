@@ -3,49 +3,80 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:regions="http://www.codeplex.com/CompositeWPF"
         xmlns:regions1="clr-namespace:DevDumps.Pats.Apps.PatsViewer.Regions"
-        Title="PATS" Style="{StaticResource ResourceKey=WindowSkinStyle}"        
-        Icon="Resources\Logo.ico">  
-    
- <Grid>
- <Grid.Resources>
-           
-        </Grid.Resources>        
-        
+        Title="PATS" Style="{StaticResource ResourceKey=WindowSkinStyle}"
+        xmlns:Key="clr-namespace:DevDumps.WPFSDK.UI.Key;assembly=DevDumps.WPFSDK.UI"
+        Icon="Resources\Logo.ico">
+
+    <Grid>
+        <Grid.Resources>
+
+        </Grid.Resources>
+
         <Grid.RowDefinitions>
-            <RowDefinition Height="40"></RowDefinition>
-            <RowDefinition Height="40"></RowDefinition>
-            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="30" />
+            <RowDefinition Height="40" />
+            <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-        
+
         <Grid Grid.Row="0">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="50"></ColumnDefinition>
-                <ColumnDefinition Width="*"></ColumnDefinition>
-                <ColumnDefinition Width="60"></ColumnDefinition>
+                <ColumnDefinition Width="30" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="70" />
             </Grid.ColumnDefinitions>
-            
-            <Border Grid.Column="0">
-                <Button >
-                    <Image Source="Resources\Logo.ico"></Image>
-                </Button>
+
+            <Border Grid.Column="0">                
+                    <Image Source="Resources\Logo.ico" Width="30" Height="30" />
             </Border>
 
-            <Border Grid.Column="1" MouseLeftButtonDown="HandleMouseLeftButtonDown"  Background="Transparent">
-                <StackPanel HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  ></StackPanel>
+            <Border Grid.Column="1" MouseLeftButtonDown="HandleMouseLeftButtonDown" Background="Transparent">
+                <StackPanel HorizontalAlignment="Stretch" VerticalAlignment="Stretch" >
+                    <TextBlock HorizontalAlignment="Left" FontSize="15" Text="PATS" Padding="5,0,5,0"></TextBlock>
+                </StackPanel>
             </Border>
 
             <Border Grid.Column="2">
-                    <Button Content="Close" Click="HandleCloseClick"></Button>
+                <StackPanel Orientation="Horizontal">
+                    <StackPanel.Resources>
+                        <Style x:Key="WindowControlButtonStyle" TargetType="Button"
+                               BasedOn="{StaticResource {x:Static ToolBar.ButtonStyleKey}}">
+                            <Setter Property="Width" Value="19" />
+                            <Setter Property="Background" Value="Transparent" />
+                            <Setter Property="VerticalContentAlignment" Value="Bottom" />
+                            <Setter Property="Padding" Value="2" />
+                            <Setter Property="Height" Value="19" />
+                            <Setter Property="Margin" Value="0,4,4,0" />
+                            <Setter Property="VerticalAlignment" Value="Top" />
+                            <Setter Property="HorizontalAlignment" Value="Right" />
+                        </Style>
+                    </StackPanel.Resources>
+
+                    <Button Style="{StaticResource ResourceKey=WindowControlButtonStyle}" Click="HandleMinimizeWindow">
+                        <Image Source="Resources\minimize.jpg" />
+                    </Button>
+
+                    <Button Style="{StaticResource ResourceKey=WindowControlButtonStyle}" Click="HandleMaximizeWindow">
+                        <Image Source="Resources\maximize.png" />
+                    </Button>
+
+                    <Button Style="{StaticResource ResourceKey=WindowControlButtonStyle}" Click="HandleCloseClick">
+                        <Image Source="Resources\close.png" />
+                    </Button>
+                </StackPanel>
             </Border>
         </Grid>
-        
-        <Grid Grid.Row="1" Margin="0,2,0,2">
-            <StackPanel regions:RegionManager.RegionName="{x:Static regions1:RegionName.MainMenuRegionName}"></StackPanel>    
+
+
+        <Grid Grid.Row="1" >
+            <Border Background="{StaticResource ResourceKey=DarkPanelBrush}" Opacity="0.7">
+                <StackPanel regions:RegionManager.RegionName="{x:Static regions1:RegionName.MainMenuRegionName}" />
+            </Border>
         </Grid>
 
-        <Grid Grid.Row="2" Margin="0,2,0,2">
-            <Border Style="{StaticResource StandardPanelStyle}"></Border>
-            <StackPanel regions:RegionManager.RegionName="{x:Static regions1:RegionName.ContentRegionName}"></StackPanel>
+        <Grid x:Name="WindowContentSite" Grid.Row="2" Margin="4,0,4,4">
+                <Border Style="{StaticResource StandardPanelStyle}">
+                    <StackPanel regions:RegionManager.RegionName="{x:Static regions1:RegionName.ContentRegionName}" />
+                </Border>
         </Grid>
 
 

@@ -9,5 +9,8 @@
 //------------------------------------------------------------------------------
 
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("modules.xml")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/close.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/maximize.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/minimize.jpg")]
 
 

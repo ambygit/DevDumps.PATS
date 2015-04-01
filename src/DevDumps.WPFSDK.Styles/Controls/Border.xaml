@@ -10,7 +10,7 @@
     <Style x:Key="StandardPanelStyle" TargetType="{x:Type Border}">
         <Setter Property="Background" Value="{StaticResource ResourceKey=StandardPanelBrush}"></Setter>
        <Setter Property="BorderThickness" Value="1"></Setter>
-        <Setter Property="CornerRadius" Value="2"></Setter>
+        <Setter Property="CornerRadius" Value="6"></Setter>
         <Setter Property="BorderBrush" Value="LightGray"></Setter>        
         <Setter Property="Padding" Value="2"></Setter>
   </Style>

@@ -122,6 +122,7 @@
     <SolidColorBrush x:Key="ThemeForegroundBrush" Color="{DynamicResource ThemeForegroundColor}"></SolidColorBrush>
     <SolidColorBrush x:Key="ThemeBorderBrush" Color="{DynamicResource ThemeBorderColor}"></SolidColorBrush>
     <SolidColorBrush x:Key="StandardPanelBrush" Color="{DynamicResource StandardPanelColor}"></SolidColorBrush>
+    <SolidColorBrush x:Key="DarkPanelBrush" Color="{DynamicResource DarkPanelColor}"></SolidColorBrush>
     
     <!-- window background brush -->
     <LinearGradientBrush x:Key="WindowBackground" EndPoint="0.5,1" StartPoint="0.5,0">

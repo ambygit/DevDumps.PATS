@@ -11,11 +11,8 @@ namespace DevDumps.WPFSDK.Common.ViewBehavior
         public static readonly DependencyProperty SubmitCommandProperty =
             DependencyProperty.Register("SubmitCommand", typeof (ICommand), typeof (SubmitOnEnterBehavior), new PropertyMetadata(default(ICommand)));
 
-        public ICommand SubmitCommand
-        {
-            get { return (ICommand) GetValue(SubmitCommandProperty); }
-            set { SetValue(SubmitCommandProperty, value); }
-        }
+        public bool ClearTextAfterSubmit { get; set; }
+      
 
         protected override void OnAttached()
         {
@@ -39,6 +36,16 @@ namespace DevDumps.WPFSDK.Common.ViewBehavior
             if (SubmitCommand == null) return;
 
             SubmitCommand.Execute(enteredValue);
+            if (ClearTextAfterSubmit)
+            {
+                AssociatedObject.Text = "";
+            }
+        }
+
+        public ICommand SubmitCommand
+        {
+            get { return (ICommand)GetValue(SubmitCommandProperty); }
+            set { SetValue(SubmitCommandProperty, value); }
         }
     }
 }

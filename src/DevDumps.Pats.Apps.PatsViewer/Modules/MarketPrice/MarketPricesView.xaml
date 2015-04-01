@@ -23,7 +23,7 @@
         <StackPanel Orientation="Horizontal" Grid.Row="0">
             <TextBox x:Name="CurrencyPair" Width="100">
                 <i:Interaction.Behaviors>
-                    <viewBehavior:SubmitOnEnterBehavior SubmitCommand="{Binding Path=SubscribeCommand}"></viewBehavior:SubmitOnEnterBehavior> 
+                    <viewBehavior:SubmitOnEnterBehavior SubmitCommand="{Binding Path=SubscribeCommand}" ClearTextAfterSubmit="True"></viewBehavior:SubmitOnEnterBehavior> 
                 </i:Interaction.Behaviors>
             </TextBox> 
             <Button Content="Add" Command="{Binding Path=SubscribeCommand}" CommandParameter="{Binding Path=Text,ElementName=CurrencyPair}"></Button>

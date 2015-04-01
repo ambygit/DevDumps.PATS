@@ -161,6 +161,10 @@
       <Project>{b4a748da-bed7-4fba-a728-8cb50442316e}</Project>
       <Name>DevDumps.WPFSDK.Styles</Name>
     </ProjectReference>
+    <ProjectReference Include="..\DevDumps.WPFSDK.UI\DevDumps.WPFSDK.UI.csproj">
+      <Project>{c044d768-08cf-42cf-9009-c72c71d31401}</Project>
+      <Name>DevDumps.WPFSDK.UI</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Page Include="Modules\MarketPrice\MarketPriceView.xaml">
@@ -183,6 +187,15 @@
   <ItemGroup />
   <ItemGroup>
     <Content Include="modules.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\close.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\maximize.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\minimize.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Resource Include="Resources\Logo.ico">

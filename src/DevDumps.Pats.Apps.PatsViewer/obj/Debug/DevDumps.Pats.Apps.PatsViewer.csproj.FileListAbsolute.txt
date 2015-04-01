@@ -21,3 +21,6 @@ G:\Dev\github\DevDumps.PATS\src\DevDumps.Pats.Apps.PatsViewer\obj\Debug\Modules\
 G:\Dev\github\DevDumps.PATS\src\DevDumps.Pats.Apps.PatsViewer\obj\Debug\Modules\MarketPrice\MarketPricesView.g.cs
 G:\Dev\github\DevDumps.PATS\src\DevDumps.Pats.Apps.PatsViewer\obj\Debug\GeneratedInternalTypeHelper.g.cs
 G:\Dev\github\DevDumps.PATS\src\DevDumps.Pats.Apps.PatsViewer\obj\Debug\Modules\MarketPrice\MarketPricesView.baml
+G:\Dev\github\DevDumps.PATS\build\PatsSolution\bin\Debug\Resources\close.png
+G:\Dev\github\DevDumps.PATS\build\PatsSolution\bin\Debug\Resources\maximize.png
+G:\Dev\github\DevDumps.PATS\build\PatsSolution\bin\Debug\Resources\minimize.jpg

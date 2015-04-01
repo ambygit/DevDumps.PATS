@@ -25,8 +25,16 @@ namespace DevDumps.Pats.Apps.PatsViewer
             Close();
         }
 
-        
- 
+
+        private void HandleMinimizeWindow(object sender, RoutedEventArgs e)
+        {
+            WindowState = WindowState.Minimized;
+        }
+
+        private void HandleMaximizeWindow(object sender, RoutedEventArgs e)
+        {
+            WindowState = WindowState.Maximized;
+        }
     }
 
 
