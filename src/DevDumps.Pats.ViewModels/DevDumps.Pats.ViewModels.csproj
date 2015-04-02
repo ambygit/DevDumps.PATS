@@ -75,6 +75,7 @@
     <Compile Include="Class1.cs" />
     <Compile Include="MarketPrice\MarketPricesViewModel.cs" />
     <Compile Include="MarketPrice\MarketPriceViewModel.cs" />
+    <Compile Include="MarketPrice\PriceViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

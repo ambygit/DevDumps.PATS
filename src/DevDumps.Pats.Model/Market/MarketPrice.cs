@@ -31,4 +31,6 @@ namespace DevDumps.Pats.Model.Market
             Timestamp = DateTime.Now;
         }
     }
+
+    
 }

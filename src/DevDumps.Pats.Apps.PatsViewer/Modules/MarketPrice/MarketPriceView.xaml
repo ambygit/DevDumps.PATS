@@ -4,10 +4,34 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:converters="clr-namespace:DevDumps.WPFSDK.Common.Converters;assembly=DevDumps.WPFSDK.Common"
+             xmlns:marketPrice="clr-namespace:DevDumps.Pats.ViewModels.MarketPrice;assembly=DevDumps.Pats.ViewModels"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
     <Grid>
         <Grid.Resources>
+
+            <Color x:Key="UpPriceColor">#FF63C53F</Color>
+            <Color x:Key="DownPriceColor">#FF940000</Color>
+            <Color x:Key="NormalPriceColor">#FF58595B</Color>
+
+            <converters:SignumConverter x:Key="SignumConverter" />
+            <Storyboard x:Key="IncreaseValueAnimation" FillBehavior="Stop" >
+                <ColorAnimationUsingKeyFrames  Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" Duration="0:0:05">
+                    <ColorAnimationUsingKeyFrames.KeyFrames>
+                        <LinearColorKeyFrame Value="{StaticResource UpPriceColor}" KeyTime="0:0:0" />
+                        <LinearColorKeyFrame Value="{StaticResource NormalPriceColor}" KeyTime="0:0:05" />
+                    </ColorAnimationUsingKeyFrames.KeyFrames>
+                </ColorAnimationUsingKeyFrames>
+            </Storyboard>
+            <Storyboard x:Key="DecreaseValueAnimation" FillBehavior="Stop" >
+                <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" Duration="0:0:05">
+                    <ColorAnimationUsingKeyFrames.KeyFrames>
+                        <LinearColorKeyFrame Value="{StaticResource DownPriceColor}" KeyTime="0:0:0" />
+                        <LinearColorKeyFrame Value="{StaticResource NormalPriceColor}" KeyTime="0:0:05" />
+                    </ColorAnimationUsingKeyFrames.KeyFrames>
+                </ColorAnimationUsingKeyFrames>
+            </Storyboard>
+            
             <Style x:Key="PriceStyle" TargetType="TextBlock">               
                 <Setter Property="VerticalAlignment" Value="Center"></Setter>
                 <Setter Property="FontSize" Value="20"></Setter>
@@ -15,10 +39,44 @@
                 <Setter Property="Margin" Value="2"></Setter>
                 <Setter Property="Width" Value="40"></Setter>
                 <Setter Property="Foreground" Value="{StaticResource ThemeForegroundBrush}"></Setter>
+
+                <Style.Triggers>
+                    <!-- Price Up Trigger -->
+                    <DataTrigger Value="-1">
+                        <DataTrigger.Binding>
+                            <MultiBinding Converter="{StaticResource SignumConverter}">
+                                <Binding Path="OldValue" />
+                                <Binding Path="NewValue" />
+                            </MultiBinding>
+                        </DataTrigger.Binding>
+                        <DataTrigger.EnterActions>
+                            <StopStoryboard BeginStoryboardName="askDownStory" />
+                            <StopStoryboard BeginStoryboardName="askUpStory" />
+                            <BeginStoryboard Name="askUpStory" HandoffBehavior="SnapshotAndReplace"
+                                                 Storyboard="{StaticResource IncreaseValueAnimation}" />
+                        </DataTrigger.EnterActions>
+                    </DataTrigger>
+
+                    <!-- Price Down Trigger -->
+                    <DataTrigger Value="1">
+                        <DataTrigger.Binding>
+                            <MultiBinding Converter="{StaticResource SignumConverter}">
+                                <Binding Path="OldValue" />
+                                <Binding Path="NewValue" />
+                            </MultiBinding>
+                        </DataTrigger.Binding>
+                        <DataTrigger.EnterActions>
+                            <StopStoryboard BeginStoryboardName="askDownStory" />
+                            <StopStoryboard BeginStoryboardName="askUpStory" />
+                            <BeginStoryboard Name="askDownStory" HandoffBehavior="SnapshotAndReplace"
+                                                 Storyboard="{StaticResource DecreaseValueAnimation}" />
+                        </DataTrigger.EnterActions>
+                    </DataTrigger>
+                </Style.Triggers>
             </Style>
 
             <DataTemplate x:Key="CurrencyPairStyle">
-                <Label Content="{Binding Path=CurrencyPair}" 
+                <Label Content="{Binding Path=(marketPrice:MarketPriceViewModel.CurrencyPair)}" 
                        FontSize="20" Foreground="{StaticResource ThemeForegroundBrush}"
                        VerticalAlignment="Center"></Label>
             </DataTemplate>
@@ -30,9 +88,9 @@
         <StackPanel Orientation="Horizontal" Margin="2">
             <ContentPresenter ContentTemplate="{StaticResource ResourceKey=CurrencyPairStyle}" Content="{Binding}">
             </ContentPresenter>
-            <TextBlock Text="{Binding Path=Bid, Converter={StaticResource ResourceKey=DoubleToPrecisionConverter}}"
+            <TextBlock DataContext="{Binding Path=Bid}" Text="{Binding Path=NewValue, Converter={StaticResource ResourceKey=DoubleToPrecisionConverter}}"
                        Style="{StaticResource ResourceKey=PriceStyle}"></TextBlock>
-            <TextBlock Text="{Binding Path=Ask, Converter={StaticResource ResourceKey=DoubleToPrecisionConverter}}"
+                <TextBlock DataContext="{Binding Path=Ask}" Text="{Binding Path=NewValue, Converter={StaticResource ResourceKey=DoubleToPrecisionConverter}}"
                        Style="{StaticResource ResourceKey=PriceStyle}"></TextBlock>
         </StackPanel>
         </Border>
