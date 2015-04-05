@@ -11,15 +11,6 @@ namespace DevDumps.Pats.ViewModels.MarketPrice
 {
     public class MarketPricesViewModel : NotificationObject
     {
-        private ICommand _subcribeCommand;
-        public ICommand SubscribeCommand {get
-        {
-            return _subcribeCommand ??
-                   (_subcribeCommand = new RelayCommand(o => SubscribeCurrency(o)));
-        }}
-
-        
-
         private readonly IEventAggregator _eventAggregator;
         private readonly IPricingServiceClient _pricingServiceClient;
         private readonly ConcurrentDictionary<string,MarketPriceViewModel> _currencyToMarketPriceViewModel = new ConcurrentDictionary<string, MarketPriceViewModel>(); 
@@ -32,26 +23,28 @@ namespace DevDumps.Pats.ViewModels.MarketPrice
             _eventAggregator = eventAggregator;
             _pricingServiceClient = pricingServiceClient;
             _pricingServiceClient.PriceUpdate += HandlePricingServiceClientPriceUpdate;
-            Subscribe("EURJPY");
+            AddEmptySlot();
         }
 
-        private void SubscribeCurrency(object parameter)
+        public void AddEmptySlot()
         {
-            var currencyPair = parameter as string;
-            //ToDO:Validate
-            if (currencyPair != null)
-            {
-                Subscribe(currencyPair.ToUpper());
-            }
+            Subscribe(null);
         }
 
-        public void Subscribe(string currencyPair)
+        private void Subscribe(string currencyPair)
         {
-            //TODO: get this from UI subscribtion
-            _pricingServiceClient.Subscribe(currencyPair);
             var subscriptionKey = currencyPair;
-            var marketPriceViewModel = _currencyToMarketPriceViewModel.GetOrAdd(subscriptionKey,
-                (key) => new MarketPriceViewModel(key, _eventAggregator));
+            MarketPriceViewModel marketPriceViewModel;
+            if (subscriptionKey == null)
+            {
+                marketPriceViewModel  = new MarketPriceViewModel("",_eventAggregator , _pricingServiceClient);
+                marketPriceViewModel.IsBound = false;
+            }
+            else
+            {
+                 marketPriceViewModel = _currencyToMarketPriceViewModel.GetOrAdd(subscriptionKey,
+              (key) => new MarketPriceViewModel(key, _eventAggregator,_pricingServiceClient));
+            }
             lock (_syncLock)
             {
                 //allow multiple UI for same subscription, add new for each subscription

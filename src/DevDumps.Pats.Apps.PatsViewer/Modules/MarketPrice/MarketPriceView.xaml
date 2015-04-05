@@ -5,6 +5,8 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:converters="clr-namespace:DevDumps.WPFSDK.Common.Converters;assembly=DevDumps.WPFSDK.Common"
              xmlns:marketPrice="clr-namespace:DevDumps.Pats.ViewModels.MarketPrice;assembly=DevDumps.Pats.ViewModels"
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+             xmlns:viewBehavior="clr-namespace:DevDumps.WPFSDK.Common.ViewBehavior;assembly=DevDumps.WPFSDK.Common"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
     <Grid>
@@ -15,6 +17,8 @@
             <Color x:Key="NormalPriceColor">#FF58595B</Color>
 
             <converters:SignumConverter x:Key="SignumConverter" />
+            <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"></BooleanToVisibilityConverter>
+            
             <Storyboard x:Key="IncreaseValueAnimation" FillBehavior="Stop" >
                 <ColorAnimationUsingKeyFrames  Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" Duration="0:0:05">
                     <ColorAnimationUsingKeyFrames.KeyFrames>
@@ -85,14 +89,31 @@
         </Grid.Resources>
         
         <Border BorderThickness="2" BorderBrush="{StaticResource ResourceKey=ThemeBackgroundBrush}" Background="{StaticResource DarkPanelBrush}" >
-        <StackPanel Orientation="Horizontal" Margin="2">
-            <ContentPresenter ContentTemplate="{StaticResource ResourceKey=CurrencyPairStyle}" Content="{Binding}">
-            </ContentPresenter>
-            <TextBlock DataContext="{Binding Path=Bid}" Text="{Binding Path=NewValue, Converter={StaticResource ResourceKey=DoubleToPrecisionConverter}}"
+            
+            <Grid>
+
+                <StackPanel Orientation="Horizontal" Margin="2" Visibility="{Binding Path=IsBound, Converter={StaticResource BooleanToVisibilityConverter}}">
+                    <ContentPresenter ContentTemplate="{StaticResource ResourceKey=CurrencyPairStyle}" Content="{Binding}">
+                    </ContentPresenter>
+                    <TextBlock DataContext="{Binding Path=Bid}" Text="{Binding Path=NewValue, Converter={StaticResource ResourceKey=DoubleToPrecisionConverter}}"
                        Style="{StaticResource ResourceKey=PriceStyle}"></TextBlock>
-                <TextBlock DataContext="{Binding Path=Ask}" Text="{Binding Path=NewValue, Converter={StaticResource ResourceKey=DoubleToPrecisionConverter}}"
+                    <TextBlock DataContext="{Binding Path=Ask}" Text="{Binding Path=NewValue, Converter={StaticResource ResourceKey=DoubleToPrecisionConverter}}"
                        Style="{StaticResource ResourceKey=PriceStyle}"></TextBlock>
-        </StackPanel>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" >
+                    <TextBox x:Name="CurrencyPair" Width="100">
+                        <i:Interaction.Behaviors>
+                            <viewBehavior:SubmitOnEnterBehavior SubmitCommand="{Binding Path=SubscribeCommand}" ClearTextAfterSubmit="True"></viewBehavior:SubmitOnEnterBehavior>
+                        </i:Interaction.Behaviors>
+                    </TextBox>
+                    <Button Content="Add" Command="{Binding Path=SubscribeCommand}" CommandParameter="{Binding Path=Text,ElementName=CurrencyPair}"></Button>
+                </StackPanel>
+
+                
+                
+            </Grid>
+        
         </Border>
     </Grid>
 

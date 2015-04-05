@@ -20,16 +20,9 @@
             <RowDefinition Height="*"></RowDefinition>
         </Grid.RowDefinitions>
         
-        <StackPanel Orientation="Horizontal" Grid.Row="0">
-            <TextBox x:Name="CurrencyPair" Width="100">
-                <i:Interaction.Behaviors>
-                    <viewBehavior:SubmitOnEnterBehavior SubmitCommand="{Binding Path=SubscribeCommand}" ClearTextAfterSubmit="True"></viewBehavior:SubmitOnEnterBehavior> 
-                </i:Interaction.Behaviors>
-            </TextBox> 
-            <Button Content="Add" Command="{Binding Path=SubscribeCommand}" CommandParameter="{Binding Path=Text,ElementName=CurrencyPair}"></Button>
-        </StackPanel>
 
         <Border Grid.Row="1" Background="{StaticResource ResourceKey=StandardPanelBrush}">
+            <StackPanel Orientation="Horizontal">
             <ListBox ItemsSource="{Binding Path=MarketPrices}" Background="Transparent">
                 <ListBox.ItemsPanel>
                     <ItemsPanelTemplate>
@@ -46,6 +39,8 @@
                     </DataTemplate>
                 </ListBox.ItemTemplate>
             </ListBox>
+
+            </StackPanel>
         </Border>
     </Grid>
 
