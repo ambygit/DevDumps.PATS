@@ -22,7 +22,6 @@
         
 
         <Border Grid.Row="1" Background="{StaticResource ResourceKey=StandardPanelBrush}">
-            <StackPanel Orientation="Horizontal">
             <ListBox ItemsSource="{Binding Path=MarketPrices}" Background="Transparent">
                 <ListBox.ItemsPanel>
                     <ItemsPanelTemplate>
@@ -39,8 +38,6 @@
                     </DataTemplate>
                 </ListBox.ItemTemplate>
             </ListBox>
-
-            </StackPanel>
         </Border>
     </Grid>
 

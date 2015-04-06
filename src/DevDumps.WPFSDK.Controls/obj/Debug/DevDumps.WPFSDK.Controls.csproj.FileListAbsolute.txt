@@ -5,3 +5,9 @@ G:\Dev\github\DevDumps.PATS\build\PatsSolution\bin\Debug\DevDumps.WPFSDK.Control
 G:\Dev\github\DevDumps.PATS\src\DevDumps.WPFSDK.Controls\obj\Debug\DevDumps.WPFSDK.Controls.csprojResolveAssemblyReference.cache
 G:\Dev\github\DevDumps.PATS\src\DevDumps.WPFSDK.Controls\obj\Debug\DevDumps.WPFSDK.Controls.dll
 G:\Dev\github\DevDumps.PATS\src\DevDumps.WPFSDK.Controls\obj\Debug\DevDumps.WPFSDK.Controls.pdb
+G:\Dev\github\DevDumps.PATS\src\DevDumps.WPFSDK.Controls\obj\Debug\GeneratedInternalTypeHelper.g.cs
+G:\Dev\github\DevDumps.PATS\src\DevDumps.WPFSDK.Controls\obj\Debug\DevDumps.WPFSDK.Controls_MarkupCompile.cache
+G:\Dev\github\DevDumps.PATS\src\DevDumps.WPFSDK.Controls\obj\Debug\DevDumps.WPFSDK.Controls_MarkupCompile.lref
+G:\Dev\github\DevDumps.PATS\src\DevDumps.WPFSDK.Controls\obj\Debug\Panel\OverlayStyle.baml
+G:\Dev\github\DevDumps.PATS\src\DevDumps.WPFSDK.Controls\obj\Debug\DevDumps.WPFSDK.Controls.g.resources
+G:\Dev\github\DevDumps.PATS\src\DevDumps.WPFSDK.Controls\obj\Debug\AllControlsStyle.baml

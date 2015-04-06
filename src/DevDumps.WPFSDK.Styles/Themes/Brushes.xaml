@@ -119,7 +119,8 @@
 
     <SolidColorBrush x:Key="ThemeBackgroundBrush" Color="{DynamicResource ThemeBackgroundColor}" ></SolidColorBrush>
     <SolidColorBrush x:Key="ThemeBackgroundContrastBrush" Color="{DynamicResource ThemeBackgroundContrastColor}"></SolidColorBrush>
-    <SolidColorBrush x:Key="ThemeForegroundBrush" Color="{DynamicResource ThemeForegroundColor}"></SolidColorBrush>
+    
+    <SolidColorBrush x:Key="ThemeForegroundBrush" Color="{DynamicResource ThemeForegroundColor}"></SolidColorBrush>    
     <SolidColorBrush x:Key="ThemeBorderBrush" Color="{DynamicResource ThemeBorderColor}"></SolidColorBrush>
     <SolidColorBrush x:Key="StandardPanelBrush" Color="{DynamicResource StandardPanelColor}"></SolidColorBrush>
     <SolidColorBrush x:Key="DarkPanelBrush" Color="{DynamicResource DarkPanelColor}"></SolidColorBrush>

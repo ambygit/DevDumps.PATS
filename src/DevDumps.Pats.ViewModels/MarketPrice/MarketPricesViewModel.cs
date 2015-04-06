@@ -9,7 +9,12 @@ using Microsoft.Practices.Prism.ViewModel;
 
 namespace DevDumps.Pats.ViewModels.MarketPrice
 {
-    public class MarketPricesViewModel : NotificationObject
+    public interface IMarketPricesSubscriptionManager
+    {
+        void Subscribe(MarketPriceViewModel marketPriceViewModel, string currencyPair);
+    }
+
+    public class MarketPricesViewModel : NotificationObject, IMarketPricesSubscriptionManager
     {
         private readonly IEventAggregator _eventAggregator;
         private readonly IPricingServiceClient _pricingServiceClient;
@@ -28,28 +33,20 @@ namespace DevDumps.Pats.ViewModels.MarketPrice
 
         public void AddEmptySlot()
         {
-            Subscribe(null);
-        }
-
-        private void Subscribe(string currencyPair)
-        {
-            var subscriptionKey = currencyPair;
-            MarketPriceViewModel marketPriceViewModel;
-            if (subscriptionKey == null)
-            {
-                marketPriceViewModel  = new MarketPriceViewModel("",_eventAggregator , _pricingServiceClient);
-                marketPriceViewModel.IsBound = false;
-            }
-            else
-            {
-                 marketPriceViewModel = _currencyToMarketPriceViewModel.GetOrAdd(subscriptionKey,
-              (key) => new MarketPriceViewModel(key, _eventAggregator,_pricingServiceClient));
-            }
+            var marketPriceViewModel = new MarketPriceViewModel("", _eventAggregator, this);
+            marketPriceViewModel.IsBound = false;
             lock (_syncLock)
             {
                 //allow multiple UI for same subscription, add new for each subscription
                 _marketPrices.Add(marketPriceViewModel);
             }
+        }
+
+        public void Subscribe(MarketPriceViewModel marketPriceViewModel, string currencyPair)
+        {
+            AddEmptySlot();            
+            _currencyToMarketPriceViewModel[currencyPair] = marketPriceViewModel;
+            _pricingServiceClient.Subscribe(currencyPair);
         }
 
 

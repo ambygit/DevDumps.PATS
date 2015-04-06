@@ -7,6 +7,7 @@
              xmlns:marketPrice="clr-namespace:DevDumps.Pats.ViewModels.MarketPrice;assembly=DevDumps.Pats.ViewModels"
              xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
              xmlns:viewBehavior="clr-namespace:DevDumps.WPFSDK.Common.ViewBehavior;assembly=DevDumps.WPFSDK.Common"
+             xmlns:panel="clr-namespace:DevDumps.WPFSDK.Controls.Panel;assembly=DevDumps.WPFSDK.Controls"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
     <Grid>
@@ -18,6 +19,7 @@
 
             <converters:SignumConverter x:Key="SignumConverter" />
             <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"></BooleanToVisibilityConverter>
+            <converters:BoolToInvertedBoolConverter x:Key="BoolToInvertedBoolConverter"></converters:BoolToInvertedBoolConverter>
             
             <Storyboard x:Key="IncreaseValueAnimation" FillBehavior="Stop" >
                 <ColorAnimationUsingKeyFrames  Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" Duration="0:0:05">
@@ -89,31 +91,28 @@
         </Grid.Resources>
         
         <Border BorderThickness="2" BorderBrush="{StaticResource ResourceKey=ThemeBackgroundBrush}" Background="{StaticResource DarkPanelBrush}" >
-            
-            <Grid>
+
+            <panel:Overlay IsOverlayOn="{Binding Path=IsBound, Converter= {StaticResource BoolToInvertedBoolConverter}}" OverlayContent="{Binding}" >
+                <panel:Overlay.OverlayContentTemplate>
+                    <DataTemplate>
+                        <TextBox x:Name="CurrencyPair" Width="100" Foreground="{StaticResource ThemeForegroundBrush}" Background="{StaticResource DarkPanelBrush}">
+                            <i:Interaction.Behaviors>
+                                <viewBehavior:SubmitOnEnterBehavior SubmitCommand="{Binding Path=(marketPrice:MarketPriceViewModel.SubscribeCommand)}" ClearTextAfterSubmit="True"></viewBehavior:SubmitOnEnterBehavior>
+                            </i:Interaction.Behaviors>
+                        </TextBox>
+                    </DataTemplate>
+                </panel:Overlay.OverlayContentTemplate>
 
                 <StackPanel Orientation="Horizontal" Margin="2" Visibility="{Binding Path=IsBound, Converter={StaticResource BooleanToVisibilityConverter}}">
-                    <ContentPresenter ContentTemplate="{StaticResource ResourceKey=CurrencyPairStyle}" Content="{Binding}">
-                    </ContentPresenter>
+                    <ContentPresenter ContentTemplate="{StaticResource ResourceKey=CurrencyPairStyle}" Content="{Binding}"></ContentPresenter>
                     <TextBlock DataContext="{Binding Path=Bid}" Text="{Binding Path=NewValue, Converter={StaticResource ResourceKey=DoubleToPrecisionConverter}}"
                        Style="{StaticResource ResourceKey=PriceStyle}"></TextBlock>
                     <TextBlock DataContext="{Binding Path=Ask}" Text="{Binding Path=NewValue, Converter={StaticResource ResourceKey=DoubleToPrecisionConverter}}"
                        Style="{StaticResource ResourceKey=PriceStyle}"></TextBlock>
                 </StackPanel>
 
-                <StackPanel Orientation="Horizontal" >
-                    <TextBox x:Name="CurrencyPair" Width="100">
-                        <i:Interaction.Behaviors>
-                            <viewBehavior:SubmitOnEnterBehavior SubmitCommand="{Binding Path=SubscribeCommand}" ClearTextAfterSubmit="True"></viewBehavior:SubmitOnEnterBehavior>
-                        </i:Interaction.Behaviors>
-                    </TextBox>
-                    <Button Content="Add" Command="{Binding Path=SubscribeCommand}" CommandParameter="{Binding Path=Text,ElementName=CurrencyPair}"></Button>
-                </StackPanel>
+            </panel:Overlay>
 
-                
-                
-            </Grid>
-        
         </Border>
     </Grid>
 

@@ -18,18 +18,18 @@ namespace DevDumps.Pats.ViewModels.MarketPrice
             }
         }
 
-        private readonly string _currencyPair;
+        private string _currencyPair;
         private readonly IEventAggregator _eventAggregator;
-        private readonly IPricingServiceClient _pricingServiceClient;
+        private readonly IMarketPricesSubscriptionManager _marketPricesSubscriptionManager;
         private PriceViewModel _bid = new PriceViewModel();
         private PriceViewModel _ask = new PriceViewModel();
         private bool _isBound;
 
-        public MarketPriceViewModel(string currencyPair, IEventAggregator eventAggregator, IPricingServiceClient pricingServiceClient)
+        public MarketPriceViewModel(string currencyPair, IEventAggregator eventAggregator, IMarketPricesSubscriptionManager marketPricesSubscriptionManager)
         {
             _currencyPair = currencyPair;
             _eventAggregator = eventAggregator;
-            _pricingServiceClient = pricingServiceClient;
+            _marketPricesSubscriptionManager = marketPricesSubscriptionManager;
         }
 
 
@@ -39,17 +39,16 @@ namespace DevDumps.Pats.ViewModels.MarketPrice
             //ToDO:Validate
             if (currencyPair != null)
             {
+                CurrencyPair = currencyPair.ToUpper();
                 IsBound = true;
-                Subscribe(currencyPair.ToUpper());
+                Subscribe(CurrencyPair);
             }
         }
 
-        public void Subscribe(string currencyPair)
+        private void Subscribe(string currencyPair)
         {
-            //TODO: get this from UI subscribtion
-            _pricingServiceClient.Subscribe(currencyPair);                    
+            _marketPricesSubscriptionManager.Subscribe(this, currencyPair);
         }
-
 
         public void Update(MarketPriceEventArgs eventArgs)
         {
@@ -60,6 +59,11 @@ namespace DevDumps.Pats.ViewModels.MarketPrice
         public string CurrencyPair
         {
             get { return _currencyPair; }
+            set
+            {
+                _currencyPair = value;
+                RaisePropertyChanged(()=>CurrencyPair);
+            }
         }
 
         public PriceViewModel Bid
@@ -91,5 +95,6 @@ namespace DevDumps.Pats.ViewModels.MarketPrice
                 RaisePropertyChanged(()=>IsBound);
             }
         }
+
     }
 }
