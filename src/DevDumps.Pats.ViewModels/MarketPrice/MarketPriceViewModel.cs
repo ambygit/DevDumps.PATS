@@ -1,7 +1,13 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Reflection;
+using System.Security.Cryptography.X509Certificates;
 using System.Windows.Input;
 using DevDumps.Pats.Gateway.Clients.Market;
 using DevDumps.WPFSDK.Core.Prism;
 using Microsoft.Practices.Prism.PubSubEvents;
+using Microsoft.Practices.Prism.Regions;
 using Microsoft.Practices.Prism.ViewModel;
 
 namespace DevDumps.Pats.ViewModels.MarketPrice
@@ -35,6 +41,7 @@ namespace DevDumps.Pats.ViewModels.MarketPrice
 
         private void SubscribeCurrency(object parameter)
         {
+           
             var currencyPair = parameter as string;
             //ToDO:Validate
             if (currencyPair != null)
@@ -43,6 +50,13 @@ namespace DevDumps.Pats.ViewModels.MarketPrice
                 IsBound = true;
                 Subscribe(CurrencyPair);
             }
+
+           
+        }
+
+        private int Add(int some)
+        {
+            return some;
         }
 
         private void Subscribe(string currencyPair)
@@ -96,5 +110,14 @@ namespace DevDumps.Pats.ViewModels.MarketPrice
             }
         }
 
+    }
+
+    public abstract class SomeClass
+    {
+        public abstract int SomeProp
+        {
+            get;
+            protected set;
+        }
     }
 }

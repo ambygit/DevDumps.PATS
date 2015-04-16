@@ -5,7 +5,7 @@
         xmlns:regions1="clr-namespace:DevDumps.Pats.Apps.PatsViewer.Regions"
         Title="PATS" Style="{StaticResource ResourceKey=WindowSkinStyle}"
         xmlns:Key="clr-namespace:DevDumps.WPFSDK.UI.Key;assembly=DevDumps.WPFSDK.UI"
-        Icon="Resources\Logo.ico">
+        Icon="Resources\Bull.ico">
 
     <Grid>
         <Grid.Resources>
@@ -20,17 +20,17 @@
 
         <Grid Grid.Row="0">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="30" />
+                <ColumnDefinition Width="20" />
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="70" />
             </Grid.ColumnDefinitions>
 
             <Border Grid.Column="0">                
-                    <Image Source="Resources\Logo.ico" Width="30" Height="30" />
+                    <Image Source="Resources\Bull.ico" Width="20" Height="20" />
             </Border>
 
             <Border Grid.Column="1" MouseLeftButtonDown="HandleMouseLeftButtonDown" Background="Transparent">
-                <StackPanel HorizontalAlignment="Stretch" VerticalAlignment="Stretch" >
+                <StackPanel HorizontalAlignment="Stretch" VerticalAlignment="Center" >
                     <TextBlock HorizontalAlignment="Left" FontSize="15" Text="PATS" Padding="5,0,5,0"></TextBlock>
                 </StackPanel>
             </Border>

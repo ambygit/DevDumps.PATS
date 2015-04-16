@@ -1,5 +1,6 @@
 ﻿using System.Collections.Concurrent;
 using System.Collections.ObjectModel;
+using System.Linq;
 using System.Windows.Input;
 using DevDumps.Pats.Gateway.Clients.Market;
 using DevDumps.WPFSDK.Core.Prism;
@@ -28,10 +29,32 @@ namespace DevDumps.Pats.ViewModels.MarketPrice
             _eventAggregator = eventAggregator;
             _pricingServiceClient = pricingServiceClient;
             _pricingServiceClient.PriceUpdate += HandlePricingServiceClientPriceUpdate;
+            
+            LoadSamplePairs();
             AddEmptySlot();
         }
 
-        public void AddEmptySlot()
+        private void LoadSamplePairs()
+        {
+            var slot = AddEmptySlot();
+            slot.SubscribeCommand.Execute("EURUSD");
+            slot = AddEmptySlot();
+            slot.SubscribeCommand.Execute("AUDJPY");
+            slot = AddEmptySlot();
+            slot.SubscribeCommand.Execute("GBPUSD");
+            slot = AddEmptySlot();
+            slot.SubscribeCommand.Execute("AUDUSD");
+            slot = AddEmptySlot();
+            slot.SubscribeCommand.Execute("USDJPY");
+            slot = AddEmptySlot();
+            slot.SubscribeCommand.Execute("EURGBP");
+            slot = AddEmptySlot();
+            slot.SubscribeCommand.Execute("AUDNZD");
+            slot = AddEmptySlot();
+            slot.SubscribeCommand.Execute("USDBRL");
+        }
+
+        public MarketPriceViewModel AddEmptySlot()
         {
             var marketPriceViewModel = new MarketPriceViewModel("", _eventAggregator, this);
             marketPriceViewModel.IsBound = false;
@@ -40,11 +63,18 @@ namespace DevDumps.Pats.ViewModels.MarketPrice
                 //allow multiple UI for same subscription, add new for each subscription
                 _marketPrices.Add(marketPriceViewModel);
             }
-        }
+            return marketPriceViewModel;
+        }        
 
         public void Subscribe(MarketPriceViewModel marketPriceViewModel, string currencyPair)
         {
-            AddEmptySlot();            
+            lock (_syncLock)
+            {
+                if (_marketPrices.Any(item => !item.IsBound))
+                {
+                    AddEmptySlot();
+                }
+            }
             _currencyToMarketPriceViewModel[currencyPair] = marketPriceViewModel;
             _pricingServiceClient.Subscribe(currencyPair);
         }

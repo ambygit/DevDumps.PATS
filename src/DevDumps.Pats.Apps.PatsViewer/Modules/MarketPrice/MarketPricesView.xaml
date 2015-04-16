@@ -22,18 +22,18 @@
         
 
         <Border Grid.Row="1" Background="{StaticResource ResourceKey=StandardPanelBrush}">
-            <ListBox ItemsSource="{Binding Path=MarketPrices}" Background="Transparent">
+            <ListBox ItemsSource="{Binding Path=MarketPrices}" Background="Transparent" HorizontalContentAlignment="Stretch">
                 <ListBox.ItemsPanel>
                     <ItemsPanelTemplate>
                         <WrapPanel HorizontalAlignment="Left"
                                    Width="{Binding Path=(FrameworkElement.ActualWidth), RelativeSource={RelativeSource AncestorType=ScrollContentPresenter}}"
                                    ItemHeight="{Binding Path=(ListView.View).ItemHeight, RelativeSource={RelativeSource AncestorType=ListView}}"
-                                   ItemWidth="{Binding Path=(ListView.View).ItemWidth, RelativeSource={RelativeSource AncestorType=ListView}}"
+                                   ItemWidth="200"
                                    ></WrapPanel>
                     </ItemsPanelTemplate>
                 </ListBox.ItemsPanel>        
                 <ListBox.ItemTemplate>
-                    <DataTemplate>
+                    <DataTemplate >
                         <marketPrices:MarketPriceView DataContext="{Binding}"></marketPrices:MarketPriceView>
                     </DataTemplate>
                 </ListBox.ItemTemplate>

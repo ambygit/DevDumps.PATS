@@ -10,7 +10,7 @@
              xmlns:panel="clr-namespace:DevDumps.WPFSDK.Controls.Panel;assembly=DevDumps.WPFSDK.Controls"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
-    <Grid>
+    <Grid >
         <Grid.Resources>
 
             <Color x:Key="UpPriceColor">#FF63C53F</Color>
@@ -104,11 +104,11 @@
                 </panel:Overlay.OverlayContentTemplate>
 
                 <StackPanel Orientation="Horizontal" Margin="2" Visibility="{Binding Path=IsBound, Converter={StaticResource BooleanToVisibilityConverter}}">
-                    <ContentPresenter ContentTemplate="{StaticResource ResourceKey=CurrencyPairStyle}" Content="{Binding}"></ContentPresenter>
+                    <ContentPresenter  HorizontalAlignment="Center" ContentTemplate="{StaticResource ResourceKey=CurrencyPairStyle}" Content="{Binding}"></ContentPresenter>
                     <TextBlock DataContext="{Binding Path=Bid}" Text="{Binding Path=NewValue, Converter={StaticResource ResourceKey=DoubleToPrecisionConverter}}"
                        Style="{StaticResource ResourceKey=PriceStyle}"></TextBlock>
                     <TextBlock DataContext="{Binding Path=Ask}" Text="{Binding Path=NewValue, Converter={StaticResource ResourceKey=DoubleToPrecisionConverter}}"
-                       Style="{StaticResource ResourceKey=PriceStyle}"></TextBlock>
+                       Margin="4,2,10,2" Style="{StaticResource ResourceKey=PriceStyle}" ></TextBlock>
                 </StackPanel>
 
             </panel:Overlay>
